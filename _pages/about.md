@@ -9,4 +9,4 @@ I graduated with a Bachelor of Science in mathematics and a minor in geology fro
 
 In my free time, I love hiking, kayaking, climbing, playing my guitar, and spending time with my friends! 
 
-<img width="200" height="100" src="/assets/images/lake_kayaking_pic.jpg"> 
+<img width="200" height="100" src="/assets/images/lake_kayaking_pic.JPG"> 
