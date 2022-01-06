@@ -7,7 +7,7 @@ permalink: /research/
 <a href = "https://drive.google.com/file/d/17giEKA_zN3vd0mMuPoQ4_cU73xPfqqdP/view?usp=sharing" target = "_blank">Mathematics and Applications of Feynman Diagrams</a>  
 Thesis Advisor: Dr. Victor Moll  
 
-### Senior Seminar Paper
+### Undergraduate Senior Seminar Paper
 <a href = "https://drive.google.com/file/d/1PSuq2oXGOinmc0T3TJ8iG_JYoeclTarl/view?usp=sharing" target = "_blank">Mathematical Fluid Dynamics of Microorganisms</a>  
 Seminar Advisor: Dr. Lisa Fauci  
 
