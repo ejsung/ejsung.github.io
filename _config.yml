@@ -106,7 +106,7 @@ analytics:
 author:
   name             : "Eric (Junhyup) Sung"
   avatar           : "/assets/images/Eric_Sung_headshot.jpeg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Recent MS graduate with an expertise in applied mathematics and physics."
+  bio              : "Recent MS graduate working at the intersection of applied mathematics and physics."
   location         : "Maryland"
   links:
     - label: "Email"
