@@ -20,6 +20,6 @@ Seminar Advisor: <a href = "http://www.math.tulane.edu/~ljf/" target = "_blank">
 **Poster**: <a href = "https://drive.google.com/file/d/1zGiyFAG4s1-nueR7RD5iMx4GRUtErAW_/view?usp=sharing" target = "_blank">*Sentinel-1A InSAR Time Series Analysis for Monitoring of Surface Subsidence in Coastal Louisiana*</a>  
 
 ### Research Interests  
-**Physics**: Open Quantum Systems, Statistical Mechanics, Quantum Field Theory, General Relativity
-
 **Math**: Applied Mathematics, Mathematical Physics, Scientific Computing/Computational Science, Fluid Dynamics, Partial Differential Equations, Differential Geometry, Algebra
+
+**Physics**: Open Quantum Systems, Statistical Mechanics, Quantum Field Theory, General Relativity
