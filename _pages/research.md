@@ -6,7 +6,7 @@ permalink: /research/
 ### Research Interests  
 **Math**: Mathematical Physics, Applied Mathematics, Fluid Dynamics, Partial Differential Equations, Computational Science, Differential Geometry, Algebra
 
-**Physics**: Open Quantum Systems, Statistical Mechanics (Classical & Quantum), Condensed Matter Physics, Quantum Field Theory, General Relativity
+**Physics**: Open Quantum Systems, Statistical Mechanics (Classical & Quantum), Condensed Matter Physics, Quantum Field Theory, General Relativity, Biophysics
 
 ### Manuscripts In Preparation
 *Decoherence-Free Entropic Gravity for Dirac Fermion*, J. Sung and D. Bondar
