@@ -8,10 +8,15 @@ Curriculum Vita <a href = "https://drive.google.com/file/d/1K4FNVjxxDInbs3xTwrdy
 ## Education 
 
 **Tulane University**  
-**Master of Science**, August 2020 - May 2021  
+**Master of Science**, May 2021  
 Major: Applied Mathematics
 
 **Tulane University**  
-**Bachelor of Science**, August 2015 - May 2020  
+**Bachelor of Science**, May 2020  
 Major: Mathematics  
 Minor: Geology
+
+## Skills 
+**Programming/Software:** Python, R, SQL, MATLAB, Mathematica, HTML, CSS, Git, Microsoft Office Suite, ArcGIS, Jupyter, LaTeX
+
+**Languages:** Korean (Elementary), Spanish (Elementary, but my reading and hearing flucuates from beginner-intermediate depending on the topic)
