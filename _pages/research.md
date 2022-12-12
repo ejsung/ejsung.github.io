@@ -2,21 +2,21 @@
 title: "Research"
 permalink: /research/
 ---
+Please feel free to reach out to me for any finished work and/or preprints I am working on!  
+### Manuscripts In Preparation
+*Decoherence-Free Entropic Gravity for Dirac Fermion*, J. Sung and <a href = "https://bondar.tulane.edu/" target = "_blank">D. Bondar</a> 
 
 ### Research Interests  
 **Math**: Mathematical Physics, Applied Mathematics, Fluid Dynamics, Partial Differential Equations, Computational Science, Differential Geometry, Algebra
 
 **Physics**: Open Quantum Systems, Statistical Mechanics (Classical & Quantum), Condensed Matter Physics, Quantum Field Theory, General Relativity, Biophysics
 
-### Manuscripts In Preparation
-*Decoherence-Free Entropic Gravity for Dirac Fermion*, J. Sung and D. Bondar
-
 ### Master's Thesis
-<a href = "https://drive.google.com/file/d/17giEKA_zN3vd0mMuPoQ4_cU73xPfqqdP/view?usp=sharing" target = "_blank">Mathematics and Applications of Feynman Diagrams</a>  
+<a href = "https://drive.google.com/file/d/17giEKA_zN3vd0mMuPoQ4_cU73xPfqqdP/view?usp=sharing" target = "_blank">*Mathematics and Applications of Feynman Diagrams*</a>  
 Thesis Advisor: <a href = "http://www.math.tulane.edu/~vhm/" target = "_blank">Prof. Victor H Moll</a> 
 
 ### Undergraduate Senior Seminar Paper
-<a href = "https://drive.google.com/file/d/1PSuq2oXGOinmc0T3TJ8iG_JYoeclTarl/view?usp=sharing" target = "_blank">Mathematical Fluid Dynamics of Microorganisms</a>  
+<a href = "https://drive.google.com/file/d/1PSuq2oXGOinmc0T3TJ8iG_JYoeclTarl/view?usp=sharing" target = "_blank">*Mathematical Fluid Dynamics of Microorganisms*</a>  
 Seminar Advisor: <a href = "http://www.math.tulane.edu/~ljf/" target = "_blank">Prof. Lisa J Fauci</a> 
 
 ### Conferences and Workshops 
