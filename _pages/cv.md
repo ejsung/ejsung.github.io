@@ -3,7 +3,7 @@ title: "CV"
 permalink: /cv/
 ---
 
-Curriculum Vita <a href = "https://drive.google.com/file/d/1K4FNVjxxDInbs3xTwrdyTRiW9hrJmbvc/view?usp=sharing" target = "_blank">here.</a>
+Curriculum Vita <a href = "https://drive.google.com/file/d/10a9SlDgHYIlE4QByoiTXN-C1mCSMW47i/view?usp=sharing" target = "_blank">here.</a>
 
 ## Education 
 
