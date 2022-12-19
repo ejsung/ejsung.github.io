@@ -6,6 +6,10 @@ Please feel free to reach out to me for any finished work and/or preprints I am 
 ### Manuscripts In Preparation
 *Decoherence-Free Entropic Gravity for Dirac Fermion*, J. Sung and <a href = "https://bondar.tulane.edu/" target = "_blank">D. Bondar</a> 
 
+### Abstracts / Posters
+Sung, J., Crooke, B., Carstens, D., Woock, C., Amer, R., and Kolker, A. (2018), <a href = "https://drive.google.com/file/d/1zGiyFAG4s1-nueR7RD5iMx4GRUtErAW_/view?usp=sharing" target = "_blank">*Sentinel-
+1A InSAR Time Series Analysis for Monitoring of Surface Subsidence in Coastal Louisiana*</a>, <a href= "https://ui.adsabs.harvard.edu/abs/2018AGUFM.G21C0571S/abstract" target = "_blank"> Abstract G21C-0571</a> presented at 2018 Fall Meeting, AGU, Washington, DC, 10-14 Dec
+
 ### Research Interests  
 **Math**: Mathematical Physics, Applied Mathematics, Fluid Dynamics, Partial Differential Equations, Computational Science, Differential Geometry, Algebra
 
