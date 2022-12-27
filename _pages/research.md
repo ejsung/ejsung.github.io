@@ -3,7 +3,7 @@ title: "Research"
 permalink: /research/
 ---
 Please feel free to reach out to me for any finished work and/or preprints I am working on! 
-### Manuscripts In Preparation
+### Preprints In Preparation
 *Decoherence-Free Entropic Gravity for Dirac Fermion*, J. Sung and <a href = "https://bondar.tulane.edu/" target = "_blank">D. Bondar</a> 
 
 ### Abstracts / Posters
