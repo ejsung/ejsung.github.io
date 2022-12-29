@@ -1,5 +1,7 @@
 ---
-title: "CV"
+#title: "CV"
+layout: single
+classes: wide
 permalink: /cv/
 ---
 

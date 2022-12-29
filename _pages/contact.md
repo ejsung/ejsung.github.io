@@ -1,5 +1,7 @@
 ---
-title: "Contact"
+#title: "Contact"
+layout: single
+classes: wide
 permalink: /contact/
 ---
 
