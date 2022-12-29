@@ -1,6 +1,7 @@
 ---
-title: "Eric (Junhyup) Sung"
+title: "Eric Junhyup Sung"
 layout: single
+#classes: wide
 author_profile: true
 excerpt: "MS in Applied Mathematics"
 header:
