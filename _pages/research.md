@@ -16,7 +16,7 @@ Sung, J., Crooke, B., Carstens, D., Woock, C., Amer, R., and Kolker, A. (2018), 
 ### Research Interests  
 **Math**: Mathematical Physics, Applied Mathematics, Fluid Dynamics, Partial Differential Equations, Computational Science, Differential Geometry, Algebra
 
-**Physics**: Open Quantum Systems, Statistical Mechanics (Classical & Quantum), Condensed Matter Physics, Quantum Field Theory, General Relativity, Biophysics
+**Physics**: Open Quantum Systems, Statistical Mechanics, Condensed Matter Physics, Quantum Field Theory, General Relativity, Biophysics
 
 ### Master's Thesis
 <a href = "https://drive.google.com/file/d/17giEKA_zN3vd0mMuPoQ4_cU73xPfqqdP/view?usp=sharing" target = "_blank">*Mathematics and Applications of Feynman Diagrams*</a>  
