@@ -2,6 +2,8 @@
 title: "Eric Junhyup Sung"
 layout: single
 classes: wide
+created_at: 2021-12-02
+last_modified_at: 2023-1-22
 author_profile: true
 excerpt: "MS in Applied Mathematics"
 header:
