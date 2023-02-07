@@ -228,22 +228,17 @@
     flex: 1;
     overflow: hidden;
 
-    li {
-      -webkit-box-flex: 0;
-      -ms-flex: none;
-      flex: none;
-    }
-
     a {
       position: relative;
 
-      &:before {
+      &:before { /* <-- underline in masthead */
         content: "";
         position: absolute;
+        visibility: hidden;
         left: 0;
         bottom: 0;
         height: 4px;
-        background: $primary-color;
+        background: $primary-color; /* underline color */
         width: 100%;
         -webkit-transition: $global-transition;
         transition: $global-transition;
@@ -251,12 +246,19 @@
         transform: scaleX(0) translate3d(0, 0, 0); // hide
       }
 
+
       &:hover:before {
+        visibility: visible;
         -webkit-transform: scaleX(1);
         -ms-transform: scaleX(1);
         transform: scaleX(1); // reveal
-      }
+      } 
+
     }
+  
+    
+    
+
   }
 
   .hidden-links {

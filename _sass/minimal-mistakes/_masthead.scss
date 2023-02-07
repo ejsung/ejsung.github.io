@@ -3,7 +3,12 @@
    ========================================================================== */
 
 .masthead {
-  position: relative;
+  /*position: relative;*/
+  position: fixed; /*for sticky header */ //<-- set position property to fixed
+  top: 0; /*for sticky header */
+  width: 100%; /*for sticky header */ //<-- set header's width
+  background: $background-color; /*for sticky header */ //<-- set header's background color
+  height: 80px; /*for sticky header */ //<-- set header's height
   border-bottom: 1px solid $border-color;
   -webkit-animation: $intro-transition;
   animation: $intro-transition;
