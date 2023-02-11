@@ -1,10 +1,11 @@
 ---
-#title: "Research"
+title: "Research"
 layout: single
 created_at: 2021-12-2
 last_modified_at: 2023-1-14
 classes: wide
 permalink: /research/
+#tags: [research, math]
 ---
 Please feel free to reach out to me about any finished work and/or preprints I am working on!
 
