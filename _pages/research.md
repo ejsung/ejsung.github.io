@@ -2,15 +2,15 @@
 title: "Research"
 layout: single
 created_at: 2021-12-2
-last_modified_at: 2023-1-14
+last_modified_at: 2023-07-06
 classes: wide
 permalink: /research/
 #tags: [research, math]
 ---
-Please feel free to reach out to me about any finished work and/or preprints I am working on!
+**Note**: I primarily publish under Eric J. Sung. However, some of my (earlier) works are published under Junhyup Sung.
 
-### Preprints In Preparation
-*Decoherence-Free Entropic Gravity for Dirac Fermion*, J. Sung and <a href = "https://bondar.tulane.edu/" target = "_blank">D. Bondar</a> 
+### Preprints
+E. J. Sung, A. G. Campos, H. Abele, and D. I. Bondar, <a href = "https://arxiv.org/abs/2307.00170" target = "_blank"> Decoherence-Free Entropic Gravity for Dirac Fermion (2023)</a>
 
 ### Abstracts / Posters
 Sung, J., Crooke, B., Carstens, D., Woock, C., Amer, R., and Kolker, A. (2018), <a href = "https://drive.google.com/file/d/1zGiyFAG4s1-nueR7RD5iMx4GRUtErAW_/view?usp=sharing" target = "_blank">*Sentinel-
@@ -23,11 +23,11 @@ Sung, J., Crooke, B., Carstens, D., Woock, C., Amer, R., and Kolker, A. (2018), 
 
 ### Master's Thesis
 <a href = "https://drive.google.com/file/d/17giEKA_zN3vd0mMuPoQ4_cU73xPfqqdP/view?usp=sharing" target = "_blank">*Mathematics and Applications of Feynman Diagrams*</a>  
-Thesis Advisor: <a href = "http://www.math.tulane.edu/~vhm/" target = "_blank">Prof. Victor H Moll</a> 
+Thesis Advisor: <a href = "http://www.math.tulane.edu/~vhm/" target = "_blank">Prof. Victor H. Moll</a> 
 
 ### Undergraduate Senior Seminar Paper
 <a href = "https://drive.google.com/file/d/1PSuq2oXGOinmc0T3TJ8iG_JYoeclTarl/view?usp=sharing" target = "_blank">*Mathematical Fluid Dynamics of Microorganisms*</a>  
-Seminar Advisor: <a href = "http://www.math.tulane.edu/~ljf/" target = "_blank">Prof. Lisa J Fauci</a> 
+Seminar Advisor: <a href = "http://www.math.tulane.edu/~ljf/" target = "_blank">Prof. Lisa J. Fauci</a> 
 
 ### Conferences and Workshops 
 * Math for All in New Orleans, March 2020. Tulane University, New Orleans, LA.  

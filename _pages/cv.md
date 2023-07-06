@@ -2,7 +2,7 @@
 title: "CV"
 layout: single
 created_at: 2021-12-02
-last_modified_at: 2022-12-27
+last_modified_at: 2023-07-06
 classes: wide
 permalink: /cv/
 ---
@@ -10,6 +10,9 @@ permalink: /cv/
 Curriculum Vita <a href = "https://drive.google.com/file/d/10a9SlDgHYIlE4QByoiTXN-C1mCSMW47i/view?usp=sharing" target = "_blank">here.</a>
 
 ## Education 
+
+**University of Arizona, Tucson**  
+**Doctor of Philosophy in Applied Mathematics**, August 2023-June 2028
 
 **Tulane University**  
 **Master of Science**, May 2021  
