@@ -34,4 +34,4 @@ Minor: Geology
 ## Skills 
 **Programming/Software:** Python, R, SQL, MATLAB, Mathematica, HTML, CSS, Git, Microsoft Office Suite, ArcGIS, Jupyter, LaTeX
 
-**Languages:** Korean (Elementary), Spanish (Elementary, but my reading and hearing fluctuates from beginner-intermediate depending on the topic)
+**Languages:** Korean (Elementary), Spanish (Elementary)
