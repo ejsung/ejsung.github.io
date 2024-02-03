@@ -2,7 +2,7 @@
 title: "CV"
 layout: single
 created_at: 2021-12-02
-last_modified_at: 2023-07-07
+last_modified_at: 2024-02-02
 classes: wide
 permalink: /cv/
 ---
@@ -14,7 +14,7 @@ Curriculum Vita <a href = "https://drive.google.com/file/d/10a9SlDgHYIlE4QByoiTX
 <img align="left" width="200" height="300" src="/assets/images/university_of_arizona_logo.webp">
 
 **University of Arizona, Tucson**  
-**Doctor of Philosophy in Applied Mathematics**, August 2023-June 2028  
+**Doctor of Philosophy in Applied Mathematics**, August 2023-May 2028  
 &nbsp;
 
 <img align="left" width="200" height="300" src="/assets/images/tulane_logo.jpeg">
