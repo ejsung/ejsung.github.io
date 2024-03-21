@@ -2,12 +2,12 @@
 title: "CV"
 layout: single
 created_at: 2021-12-02
-last_modified_at: 2024-02-02
+last_modified_at: 2024-03-20
 classes: wide
 permalink: /cv/
 ---
 
-Curriculum Vita <a href = "https://drive.google.com/file/d/10a9SlDgHYIlE4QByoiTXN-C1mCSMW47i/view?usp=sharing" target = "_blank">here.</a>
+Full Curriculum Vita <a href = "https://drive.google.com/file/d/10a9SlDgHYIlE4QByoiTXN-C1mCSMW47i/view?usp=sharing" target = "_blank">here.</a>
 
 ## Education 
 

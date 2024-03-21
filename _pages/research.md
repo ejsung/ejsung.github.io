@@ -2,7 +2,7 @@
 title: "Research"
 layout: single
 created_at: 2021-12-2
-last_modified_at: 2023-11-19
+last_modified_at: 2024-03-20
 classes: wide
 permalink: /research/
 #tags: [research, math]
@@ -23,7 +23,7 @@ Sung, J., Crooke, B., Carstens, D., Woock, C., Amer, R., and Kolker, A. (2018), 
 ### Research Interests  
 **Math**: Mathematical Physics, Applied Mathematics, Fluid Dynamics, Partial Differential Equations, Computational Science, Differential Geometry, Algebra
 
-**Physics**: Open Quantum Systems, Statistical Mechanics, Condensed Matter Physics, Quantum Field Theory, General Relativity, Biophysics
+**Physics**: Open Quantum Systems, Quantum Information Theory, Statistical Mechanics, Condensed Matter Physics, Quantum Field Theory, General Relativity
 
 ### Master's Thesis
 <a href = "https://drive.google.com/file/d/17giEKA_zN3vd0mMuPoQ4_cU73xPfqqdP/view?usp=sharing" target = "_blank">*Mathematics and Applications of Feynman Diagrams*</a>  
