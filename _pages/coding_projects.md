@@ -1,5 +1,5 @@
 ---
-#title: "Coding Projects"
+title: "Coding Projects"
 layout: single
 created_at: 2022-12-27
 last_modified_at: 2022-12-27
