@@ -2,15 +2,17 @@
 title: "Coding Projects"
 layout: single
 created_at: 2024-3-20
-last_modified_at: 2024-3-20
+last_modified_at: 2024-3-30
 classes: wide
 permalink: /coding_projects/
 ---
 
-Most of my coding projects are inspired from my research and favorite subjects. I also do projects that stem from eclectic interests such as video games. 
 
+Most of my coding projects are inspired from my research and favorite subjects. I also do projects that stem from eclectic interests such as video games and/or optizimizing my life!
 
-<p style="text-align: left;">
+Please see my github for full project details: <a href = "https://github.com/ejsung?tab=repositories" target = "_blank">https://github.com/ejsung?tab=repositories</a>
+
+<!-- <p style="text-align: left;">
     <font size="+2">
     <strong>Ising Model Simulation
     <span style="float:right;">
@@ -48,4 +50,4 @@ Most of my coding projects are inspired from my research and favorite subjects. 
     </span>
     </strong>
     </font>
-</p>
+</p> -->
