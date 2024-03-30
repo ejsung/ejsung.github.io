@@ -1,8 +1,8 @@
 
 {% assign date_format = site.date_format | default: "%B %-d, %Y" %}
 {% if page.created_at %}
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_created_label | default: "Created:" }}</strong> <time class="dt-published" datetime="{{ page.created_at2 | date: "%Y-%m-%d" }}">{{ page.created_at2 | date: date_format }}</time>&emsp;
-  <strong><i class="fas fa-fw fa-history" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_updated_label | default: "Updated:" }}</strong> <time class="dt-published" datetime="{{ page.last_modified_at2 | date: "%Y-%m-%d" }}">{{ page.last_modified_at2 | date: date_format }}</time>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_created_label | default: "Created:" }}</strong> <time class="dt-published" datetime="{{ page.created_at | date: "%Y-%m-%d" }}">{{ page.created_at | date: date_format }}</time>&emsp;
+  <strong><i class="fas fa-fw fa-history" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_updated_label | default: "Updated:" }}</strong> <time class="dt-published" datetime="{{ page.last_modified_at | date: "%Y-%m-%d" }}">{{ page.last_modified_at | date: date_format }}</time>
   </p>
 {% endif %}
 

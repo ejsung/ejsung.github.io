@@ -249,7 +249,8 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
-
+  # - jekyll-last-modified-at
+  # - jekyll-git-metadata
 # mimic GitHub Pages with --safe
 whitelist:
   - jekyll-paginate
@@ -257,7 +258,8 @@ whitelist:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
-
+  # - jekyll-last-modified-at
+  # - jekyll-git-metadata
 
 # Archives
 #  Type
