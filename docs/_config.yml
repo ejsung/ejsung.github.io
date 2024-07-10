@@ -282,7 +282,7 @@ plugins:
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
-
+  # - jekyll-last-modified-at
 # mimic GitHub Pages with --safe
 whitelist:
   - jekyll-paginate
@@ -291,6 +291,7 @@ whitelist:
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
+  # - jekyll-last-modified-at
 
 
 # Archives
