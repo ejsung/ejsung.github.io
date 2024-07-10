@@ -8,6 +8,7 @@ permalink: /contact/
 ---
 
 <!---* Email 1: ericsung [dot] sung0 [at] gmail [dot] com--->
-* Email: jsung1 [at] math [dot] arizona [dot] edu 
+* Email: jsung1 [at] arizona [dot] edu 
+<!-- * Email: jsung1 [at] math [dot] arizona [dot] edu  -->
 <!---* Email 2: jsung2 [at] tulane [dot] edu--->
 <!-- * LinkedIn: [ericsung1996](https://www.linkedin.com/in/ericsung1996/) -->
