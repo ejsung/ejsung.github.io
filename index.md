@@ -7,7 +7,7 @@ last_modified_at: 2024-07-09
 author_profile: true
 excerpt: "Applied Mathematics PhD Student"
 header:
-    overlay_image: assets/images/An_abstract_image_that_combines_elements_of_partic (1).jpg
+    overlay_image: assets/images/An_abstract_image_that_combines_elements_of_partic (2).jpg
     # overlay_image: assets/images/quantum_physics_photo.jpg
     overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
 ---
