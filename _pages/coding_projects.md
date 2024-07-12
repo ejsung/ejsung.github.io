@@ -7,7 +7,6 @@ classes: wide
 permalink: /coding_projects/
 ---
 
-
 Most of my coding projects are inspired from my research and favorite subjects. I also do projects that stem from eclectic interests such as video games and/or optizimizing my life!
 
 Please see my github for full project details: <a href = "https://github.com/ejsung?tab=repositories" target = "_blank">https://github.com/ejsung?tab=repositories</a>

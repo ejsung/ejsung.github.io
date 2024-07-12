@@ -3,7 +3,7 @@ title: "Eric Junhyup Sung"
 layout: single
 classes: wide
 created_at: 2021-12-02
-# last_modified_at: 2024-07-09
+last_modified_at: 2024-07-09
 author_profile: true
 excerpt: "Applied Mathematics PhD Student"
 header:
