@@ -2,7 +2,7 @@
 title: "Coding Projects"
 layout: single
 created_at: 2024-3-20
-last_modified_at: 2024-3-30
+# last_modified_at: 2024-3-30
 classes: wide
 permalink: /coding_projects/
 ---
