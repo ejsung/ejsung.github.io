@@ -107,7 +107,7 @@ analytics:
 # Site Author
 author:
   name             : "Eric Junhyup Sung"
-  avatar           : "/assets/images/Eric_Sung_headshot.jpeg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/Eric_Sung_uofa_2023.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Applied mathematics PhD student working at the intersection of mathematics and physics."
   location         : "Tucson, Arizona"
   links:

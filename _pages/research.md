@@ -2,12 +2,12 @@
 title: "Research"
 layout: single
 created_at: 2021-12-2
-# last_modified_at: 2024-03-20
+last_modified_at: 2024-03-20
 classes: wide
 permalink: /research/
-#tags: [research, math]
+tags: [research, math]
 ---
-**Note**: I primarily publish under Eric J. Sung. However, some of my (earlier) works are published under Junhyup Sung.
+**Note**: I primarily publish under Eric J. Sung. However, some of my (earlier) works are published under Junhyup Sung. 
 
 ### Publications
 **E. J. Sung**, A. G. Campos, H. Abele, and D. I. Bondar, Decoherence-free entropic gravity
