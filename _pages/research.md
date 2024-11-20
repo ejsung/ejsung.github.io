@@ -2,7 +2,7 @@
 title: "Research"
 layout: single
 created_at: 2021-12-2
-last_modified_at: 2024-03-20
+last_modified_at: 2024-11-20
 classes: wide
 permalink: /research/
 tags: [research, math]
@@ -11,7 +11,7 @@ tags: [research, math]
 
 ### Publications
 **E. J. Sung**, A. G. Campos, H. Abele, and D. I. Bondar, Decoherence-free entropic gravity
-for a dirac fermion, <a href = "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.108.104036" target = "_blank"> Phys. Rev. D **108**, 104036 (2023)</a>
+for a Dirac fermion, <a href = "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.108.104036" target = "_blank"> Phys. Rev. D **108**, 104036 (2023)</a>
 
 <!-- ### Preprints
 E. J. Sung, A. G. Campos, H. Abele, and D. I. Bondar, <a href = "https://arxiv.org/abs/2307.00170" target = "_blank"> Decoherence-Free Entropic Gravity for Dirac Fermion (2023)</a> -->
@@ -21,9 +21,9 @@ Sung, J., Crooke, B., Carstens, D., Woock, C., Amer, R., and Kolker, A. (2018), 
 1A InSAR Time Series Analysis for Monitoring of Surface Subsidence in Coastal Louisiana*</a>, <a href= "https://ui.adsabs.harvard.edu/abs/2018AGUFM.G21C0571S/abstract" target = "_blank"> Abstract G21C-0571</a> presented at 2018 Fall Meeting, AGU, Washington, DC, 10-14 Dec
 
 ### Research Interests  
-**Math**: Mathematical Physics, Applied Mathematics, Fluid Dynamics, Partial Differential Equations, Computational Science, Differential Geometry, Algebra
+**Math**: Mathematical Physics, Applied Mathematics, Fluid Dynamics, Partial Differential Equations, Computational Science
 
-**Physics**: Open Quantum Systems, Quantum Information Theory, Statistical Mechanics, Condensed Matter Physics, Quantum Field Theory, General Relativity
+**Physics**: Condensed Matter Physics, Statistical Mechanics, Open Quantum Systems, Quantum Information Theory, Quantum Field Theory, General Relativity
 
 ### Master's Thesis
 <a href = "https://drive.google.com/file/d/17giEKA_zN3vd0mMuPoQ4_cU73xPfqqdP/view?usp=sharing" target = "_blank">*Mathematics and Applications of Feynman Diagrams*</a>  
