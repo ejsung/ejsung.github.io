@@ -2,7 +2,7 @@
 title: "CV"
 layout: single
 created_at: 2021-12-02
-last_modified_at: 2024-03-30
+last_modified_at: 2024-12-23
 classes: wide
 permalink: /cv/
 ---
@@ -32,6 +32,6 @@ Major: Mathematics
 Minor: Geology
 
 ## Skills 
-**Programming/Software:** Python, R, SQL, MATLAB, Mathematica, HTML, CSS, Git, Microsoft Office Suite, ArcGIS, Jupyter, LaTeX
+**Programming/Software:** Python, Julia, R, Mathematica, CUDA, MATLAB, SQL, HTML, CSS, JavaScript, Git, Microsoft Office, ArcGIS, LaTeX 
 
 **Languages:** Korean (Elementary), Spanish (Elementary)
