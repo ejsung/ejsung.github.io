@@ -2,7 +2,7 @@
 title: "Research"
 layout: single
 created_at: 2021-12-2
-last_modified_at: 2024-11-20
+last_modified_at: 2024-12-27
 classes: wide
 permalink: /research/
 tags: [research, math]
@@ -21,7 +21,7 @@ Sung, J., Crooke, B., Carstens, D., Woock, C., Amer, R., and Kolker, A. (2018), 
 1A InSAR Time Series Analysis for Monitoring of Surface Subsidence in Coastal Louisiana*</a>, <a href= "https://ui.adsabs.harvard.edu/abs/2018AGUFM.G21C0571S/abstract" target = "_blank"> Abstract G21C-0571</a> presented at 2018 Fall Meeting, AGU, Washington, DC, 10-14 Dec
 
 ### Research Interests  
-**Math**: Mathematical Physics, Applied Mathematics, Fluid Dynamics, Partial Differential Equations, Computational Science
+**Math**: Mathematical Physics, Applied Mathematics, Machine Learning, Fluid Dynamics, Partial Differential Equations
 
 **Physics**: Condensed Matter Physics, Statistical Mechanics, Open Quantum Systems, Quantum Information Theory, Quantum Field Theory, General Relativity
 
