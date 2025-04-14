@@ -52,8 +52,10 @@ layout: default
           <h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label }}</h4>
         {% endif %}
         {% include page__taxonomy.html %}
+        {% comment %} Show dates at bottom of page {% endcomment %}
+        {% comment %}
         {% include page__date.html %}
-        <!--{% include page__date.html %}-->  <!--This is for placing the date created, updated, etc., at the bottom of page-->
+        {% endcomment %}
       </footer>
 
       {% if page.share %}{% include social-share.html %}{% endif %}

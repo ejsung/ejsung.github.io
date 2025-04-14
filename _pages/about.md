@@ -1,11 +1,23 @@
 ---
 title: "About"
 layout: single
+date: 2021-12-02
+classes: wide
+permalink: /about/
+---
+
+<!--
+Previous front matter backup:
+---
+title: "About"
+layout: single
 created_at: 2021-12-02
 last_modified_at: 2023-07-06
 classes: wide
 permalink: /about/
 ---
+-->
+
 
 I graduated with a Bachelor of Science in mathematics and a minor in geology from Tulane University in May 2020. Then I graduated with a Master of Science in applied mathematics from Tulane University in May 2021. Currently, I am a second year Ph.D. student in the applied mathematics program at the University of Arizona. 
 

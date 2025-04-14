@@ -1,11 +1,19 @@
 ---
 title: "CV"
 layout: single
+date: 2021-12-02
+classes: wide
+permalink: /cv/
+---
+
+<!-- ---
+title: "CV"
+layout: single
 created_at: 2021-12-02
 last_modified_at: 2024-12-23
 classes: wide
 permalink: /cv/
----
+--- -->
 
 Full Curriculum Vita <a href = "https://drive.google.com/file/d/10a9SlDgHYIlE4QByoiTXN-C1mCSMW47i/view?usp=sharing" target = "_blank">here.</a>
 

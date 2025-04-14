@@ -1,11 +1,19 @@
 ---
 title: "Coding Projects"
 layout: single
+date: 2024-3-20
+classes: wide
+permalink: /coding_projects/
+---
+
+<!-- ---
+title: "Coding Projects"
+layout: single
 created_at: 2024-3-20
 last_modified_at: 2024-3-30
 classes: wide
 permalink: /coding_projects/
----
+--- -->
 
 Most of my coding projects are inspired from my research and favorite subjects. I also do projects that stem from eclectic interests such as video games and/or optizimizing my life!
 
