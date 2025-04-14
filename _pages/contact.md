@@ -1,14 +1,18 @@
 ---
 title: "Contact"
 layout: single
-created_at: 2021-12-27
-last_modified_at: 2023-07-10
+date: 2021-12-27
 classes: wide
 permalink: /contact/
 ---
 
-<!---* Email 1: ericsung [dot] sung0 [at] gmail [dot] com--->
+<!-- ---
+title: "Contact"
+layout: single
+created_at: 2021-12-27
+last_modified_at: 2023-07-10
+classes: wide
+permalink: /contact/
+--- -->
+
 * Email: jsung1 [at] arizona [dot] edu 
-<!-- * Email: jsung1 [at] math [dot] arizona [dot] edu  -->
-<!---* Email 2: jsung2 [at] tulane [dot] edu--->
-<!-- * LinkedIn: [ericsung1996](https://www.linkedin.com/in/ericsung1996/) -->
