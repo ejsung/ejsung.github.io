@@ -6,7 +6,7 @@ classes: wide
 permalink: /research/
 tags: [research, math]
 ---
-**Note**: I primarily publish under Eric J. Sung. However, some of my (earlier) works are published under Junhyup Sung. testing testing 123
+**Note**: I primarily publish under Eric J. Sung. However, some of my (earlier) works are published under Junhyup Sung. 
 
 ### Publications
 **E. J. Sung**, A. G. Campos, H. Abele, and D. I. Bondar, Decoherence-free entropic gravity
