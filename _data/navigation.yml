@@ -14,8 +14,8 @@ main:
     url: /cv/
   - title: "Contact"
     url: /contact/
-  - title: "Other Interests"
-    url: /other_interests/
+  # - title: "Other Interests"
+  #   url: /other_interests/
       # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
