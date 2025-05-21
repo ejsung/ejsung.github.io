@@ -4,7 +4,7 @@ layout: single
 date: 2021-12-2
 classes: wide
 permalink: /research/
-tags: [research, math, physics]
+tags: [research, math, physics, publication, preprint, poster, conference]
 ---
 **Note**: I primarily publish under Eric J. Sung. However, some of my (earlier) works are published under Junhyup Sung. 
 
