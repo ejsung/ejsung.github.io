@@ -4,6 +4,7 @@ layout: single
 date: 2021-12-02
 classes: wide
 permalink: /about/
+tags: [about, eric, sung]
 ---
 
 <!--

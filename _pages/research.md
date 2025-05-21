@@ -4,7 +4,7 @@ layout: single
 date: 2021-12-2
 classes: wide
 permalink: /research/
-tags: [research, math]
+tags: [research, math, physics]
 ---
 **Note**: I primarily publish under Eric J. Sung. However, some of my (earlier) works are published under Junhyup Sung. 
 
@@ -12,8 +12,8 @@ tags: [research, math]
 **E. J. Sung**, A. G. Campos, H. Abele, and D. I. Bondar, Decoherence-free entropic gravity
 for a Dirac fermion, <a href = "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.108.104036" target = "_blank"> Phys. Rev. D **108**, 104036 (2023)</a>
 
-<!-- ### Preprints
-E. J. Sung, A. G. Campos, H. Abele, and D. I. Bondar, <a href = "https://arxiv.org/abs/2307.00170" target = "_blank"> Decoherence-Free Entropic Gravity for Dirac Fermion (2023)</a> -->
+### Preprints
+
 
 ### Abstracts / Posters
 Sung, J., Crooke, B., Carstens, D., Woock, C., Amer, R., and Kolker, A. (2018), <a href = "https://drive.google.com/file/d/1zGiyFAG4s1-nueR7RD5iMx4GRUtErAW_/view?usp=sharing" target = "_blank">*Sentinel-
