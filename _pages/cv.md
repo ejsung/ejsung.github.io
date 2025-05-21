@@ -4,7 +4,7 @@ layout: single
 date: 2021-12-02
 classes: wide
 permalink: /cv/
-tags: [cv, resume]
+tags: [cv, resume, skills, software, language]
 ---
 
 <!-- ---
