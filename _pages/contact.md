@@ -4,6 +4,7 @@ layout: single
 date: 2021-12-27
 classes: wide
 permalink: /contact/
+tags: [contact, email, office]
 ---
 
 <!-- ---

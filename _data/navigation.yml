@@ -8,6 +8,8 @@ main:
     url: /about/
   - title: "Research"
     url: /research/
+  - title: "Teaching"
+    url: /teaching/
   # - title: "Coding Projects"
   #   url: /coding_projects/
   - title: "CV"

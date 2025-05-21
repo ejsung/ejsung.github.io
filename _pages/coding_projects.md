@@ -4,6 +4,7 @@ layout: single
 date: 2024-3-20
 classes: wide
 permalink: /coding_projects/
+tags: [coding, software, simulation]
 ---
 
 <!-- ---
