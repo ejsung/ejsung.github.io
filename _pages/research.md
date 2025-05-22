@@ -29,7 +29,7 @@ Sung, J., Crooke, B., Carstens, D., Woock, C., Amer, R., and Kolker, A. (2018), 
 Thesis Advisor: <a href = "http://www.math.tulane.edu/~vhm/" target = "_blank">Prof. Victor H. Moll</a> 
 
 ### Undergraduate Senior Seminar Paper
-<a href = "https://drive.google.com/file/d/1PSuq2oXGOinmc0T3TJ8iG_JYoeclTarl/view?usp=sharing" target = "_blank">*Mathematical Fluid Dynamics of Microorganisms*</a>  
+*Mathematical Fluid Dynamics of Microorganisms*  
 Seminar Advisor: <a href = "http://www.math.tulane.edu/~ljf/" target = "_blank">Prof. Lisa J. Fauci</a> 
 
 ### Conferences and Workshops 
