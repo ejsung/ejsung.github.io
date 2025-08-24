@@ -7,12 +7,12 @@ permalink: /courses/math_112_fall_2025/
 tags: [teaching, classes, courses, math 112, fall, algebra, college algebra]
 ---
 ### Course Information
-- Section: 026
+- Section: 26
 - Time: Monday, Wednesday, Friday at 2:00PM - 2:50PM
 - Room: SSCI 222
 
 ### Office Hours
-TBD
+Tuesday, Wednesday, Thursday at 12:00PM - 1:00 PM
 
 <ins>Location:</ins>  
 Office hours will be held at my office in ENR2-S370EE. One on one virtual meetings via Zoom are available upon request.  
