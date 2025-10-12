@@ -16,7 +16,7 @@ Condensed Matter Physics, Nonequilibrium Quantum Statistical Mechanics, Open Qua
 for a Dirac fermion, <a href = "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.108.104036" target = "_blank"> Phys. Rev. D **108**, 104036 (2023)</a>
 
 ### Preprints in Preparation
-Generalized Boundary Conditions for the qBounce Experiment, **E. J. Sung**, B. Koch, H. Abele, and D. I. Bondar
+Generalized Boundary Conditions for the qBounce Experiment, **E. J. Sung**, B. Koch, T. Jenke, H. Abele, and D. I. Bondar
 
 ### Abstracts / Posters
 Sung, J., Crooke, B., Carstens, D., Woock, C., Amer, R., and Kolker, A. (2018), <a href = "https://drive.google.com/file/d/1zGiyFAG4s1-nueR7RD5iMx4GRUtErAW_/view?usp=sharing" target = "_blank">*Sentinel-
