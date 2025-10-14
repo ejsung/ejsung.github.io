@@ -115,7 +115,7 @@ author:
       icon: "fas fa-fw fa-envelope-square"
       url: "/contact/"
     - label: "Google Scholar"
-      icon: "ai ai-google-scholar-square"
+      icon: "ai ai-google-scholar-square ai-fw"
       # icon: "fas fa-fw fa-graduation-cap"
       url: "https://scholar.google.com/citations?user=wVkCFwwAAAAJ&hl=en"
     - label: "ResearchGate"
