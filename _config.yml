@@ -18,17 +18,17 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Eric Junhyup Sung"
+title                    : "Eric J. Sung"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Eric Junhyup Sung"
-description              : "Eric Junhyup Sung's website."
+name                     : "Eric J. Sung"
+description              : "Eric J. Sung's website."
 url                      : "https://ejsung.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "ejsung/ejsung.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : "/assets/images/favicon-32x32.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title           : Eric Junhyup Sung # overrides the website title displayed in the masthead, use " " for no title
+masthead_title           : Eric J. Sung # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
@@ -106,7 +106,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Eric Junhyup Sung"
+  name             : "Eric J. Sung"
   avatar           : "/assets/images/Eric_Sung_uofa_2023.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Applied mathematics PhD student working at the intersection of mathematics and physics."
   location         : "Tucson, Arizona"
