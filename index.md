@@ -1,5 +1,5 @@
 ---
-title: "Eric Junhyup Sung"
+title: "Eric J. Sung"
 layout: single
 classes: wide
 created_at: 2021-12-02
