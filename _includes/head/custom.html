@@ -10,3 +10,19 @@
 <meta name="theme-color" content="#ffffff">
 <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
 <!-- end custom head snippets -->
+
+<!-- make author sidebar and footer links open in separate tab -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  // Author sidebar links
+  document.querySelectorAll('.author__urls a[href^="http"]').forEach(a => {
+    a.target = '_blank';
+    a.rel = 'noopener noreferrer';
+  });
+  // Footer social links
+  document.querySelectorAll('.page__footer-follow a[href^="http"]').forEach(a => {
+    a.target = '_blank';
+    a.rel = 'noopener noreferrer';
+  });
+});
+</script>
