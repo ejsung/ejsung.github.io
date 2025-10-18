@@ -15,7 +15,7 @@ Condensed Matter Physics, Nonequilibrium Quantum Statistical Mechanics, Open Qua
 **E. J. Sung**, A. G. Campos, H. Abele, and D. I. Bondar, Decoherence-free entropic gravity
 for a Dirac fermion, <a href = "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.108.104036" target = "_blank"> Phys. Rev. D **108**, 104036 (2023)</a>
 
-### Preprints in Preparation
+### Under Review
 Generalized Boundary Conditions for the qBounce Experiment, **E. J. Sung**, B. Koch, T. Jenke, H. Abele, and D. I. Bondar
 
 ### Abstracts / Posters
