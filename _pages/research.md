@@ -12,11 +12,11 @@ tags: [research, math, physics, publication, preprint, poster, conference]
 Condensed Matter Physics, Nonequilibrium Quantum Statistical Mechanics, Open Quantum Systems, Quantum Information Theory, Quantum Field Theory, General Relativity
 
 ### Publications
-**E. J. Sung**, A. G. Campos, H. Abele, and D. I. Bondar, Decoherence-free entropic gravity
-for a Dirac fermion, <a href = "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.108.104036" target = "_blank"> Phys. Rev. D **108**, 104036 (2023)</a>
+**E. J. Sung**, A. G. Campos, H. Abele, and D. I. Bondar, "Decoherence-free entropic gravity
+for a Dirac fermion," <a href = "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.108.104036" target = "_blank" rel="noopener"> *Phys. Rev. D* **108**, 104036 (2023)</a>.
 
 ### Under Review
-Generalized Boundary Conditions for the qBounce Experiment, **E. J. Sung**, B. Koch, T. Jenke, H. Abele, and D. I. Bondar
+**E. J. Sung**, B. Koch, T. Jenke, H. Abele, and D. I. Bondar, "Generalized Boundary Conditions for the qBounce Experiment" (2025), <a href = "https://arxiv.org/abs/2510.15341" target = "_blank" rel="noopener"> arXiv:2510.15341</a>.
 
 ### Abstracts / Posters
 Sung, J., Crooke, B., Carstens, D., Woock, C., Amer, R., and Kolker, A. (2018), <a href = "https://drive.google.com/file/d/1zGiyFAG4s1-nueR7RD5iMx4GRUtErAW_/view?usp=sharing" target = "_blank">*Sentinel-
