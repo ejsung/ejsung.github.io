@@ -12,7 +12,7 @@ tags: [teaching, classes, courses, math 112, spring, algebra, college algebra]
 - Room: MLNG 311
 
 ### Office Hours
-Tuesday at 2-3pm  
+Tuesday at 2:00pm - 3:00pm  
 Wednesday, Thursday at 12:00pm - 1:00pm
 
 <ins>Location:</ins>  
