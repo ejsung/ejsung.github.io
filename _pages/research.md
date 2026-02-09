@@ -9,7 +9,7 @@ tags: [research, math, physics, publication, preprint, poster, conference]
 **Note**: I primarily publish under Eric J. Sung. However, some of my (earlier) works are published under Junhyup Sung. 
 
 ### Research Interests 
-Condensed Matter Physics, Nonequilibrium Quantum Statistical Mechanics, Open Quantum Systems, Quantum Information Theory, Quantum Field Theory, General Relativity
+Condensed Matter Physics, Nonequilibrium Quantum Many-Body Physics, Scientific Machine Learning, General Relativity
 
 ### Publications
 **E. J. Sung**, A. G. Campos, H. Abele, and D. I. Bondar, "Decoherence-free entropic gravity
