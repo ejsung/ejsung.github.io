@@ -17,18 +17,18 @@ Condensed Matter Physics, Nonequilibrium Quantum Many-Body Physics, Scientific M
 ### Under Review
 **E. J. Sung**, B. Koch, T. Jenke, H. Abele, and D. I. Bondar, *Generalized Boundary Conditions for the qBounce Experiment*, Oct. 2025, <a href = "https://arxiv.org/abs/2510.15341" target = "_blank" rel="noopener"> arXiv:2510.15341 [quant-ph]</a>.
 
-**E. J. Sung** and C. A. Stafford, *Decoherence and the Reemergence of Coherence From a Superconducting ”Horizon”*, Mar. 2026, <a href = "https://arxiv.org/abs/2603.16765" target = "_blank" rel="noopener"> arXiv:2603.16765 [quant-ph]</a>.
+**E. J. Sung** and C. A. Stafford, *Decoherence and the Reemergence of Coherence From a Superconducting "Horizon"*, Mar. 2026, <a href = "https://arxiv.org/abs/2603.16765" target = "_blank" rel="noopener"> arXiv:2603.16765 [quant-ph]</a>.
 
 ### Abstracts / Posters
 **J. Sung**, B. Crooke, D. Carstens, C. Woock, R. Amer, and A. Kolker, *Sentinel-1A InSAR Time Series Analysis for Monitoring of Surface Subsidence in Coastal Louisiana*, in AGU Fall Meeting Abstracts, Vol. 2018 (Dec. 2018), <a href= "https://ui.adsabs.harvard.edu/abs/2018AGUFM.G21C0571S/abstract" target = "_blank"> G21C-0571</a>.
 
 ### Master's Thesis
 <a href = "https://drive.google.com/file/d/17giEKA_zN3vd0mMuPoQ4_cU73xPfqqdP/view?usp=sharing" target = "_blank">*Mathematics and Applications of Feynman Diagrams*</a>  
-Thesis Advisor: <a href = "http://www.math.tulane.edu/~vhm/" target = "_blank">Prof. Victor H. Moll</a> 
+Thesis Advisor: <a href = "https://sse.tulane.edu/victor-h-moll" target = "_blank">Prof. Victor H. Moll</a> 
 
 ### Undergraduate Senior Seminar Paper
 *Mathematical Fluid Dynamics of Microorganisms*  
-Seminar Advisor: <a href = "http://www.math.tulane.edu/~ljf/" target = "_blank">Prof. Lisa J. Fauci</a> 
+Seminar Advisor: <a href = "https://sse.tulane.edu/lisa-j-fauci" target = "_blank">Prof. Lisa J. Fauci</a> 
 
 ### Conferences and Workshops 
 * American Physical Society Global Physics Summit 2026, Mar 2026 (**Talk**). Denver, CO   
