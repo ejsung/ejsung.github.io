@@ -12,4 +12,4 @@ header:
     overlay_filter: 0.4 # same as adding an opacity of 0.5 to a black background
 ---
 
-Hey peeps! My name is Eric Sung! I am a 3rd year PhD student in the Program in Applied Mathematics at the University of Arizona. I primarily work in condensed matter physics and open quantum systems. To see my current and past research, check out my [research section](_pages/research.md)!
+Hey peeps! My name is Eric Sung! I am a 3rd year PhD student in the Program in Applied Mathematics at the University of Arizona. I primarily work on condensed matter physics, open quantum systems, and scientific machine learning. To see my current and past research, check out my [research section](_pages/research.md)!
