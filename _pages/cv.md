@@ -41,6 +41,6 @@ Major: Mathematics
 Minor: Geology
 
 ## Skills 
-**Programming/Software:** Python, Julia, R, Mathematica, CUDA, MATLAB, SQL, HTML, CSS, JavaScript, Git, Microsoft Office, ArcGIS, LaTeX 
+**Programming/Software:** Python, Julia, R, Mathematica, CUDA, MATLAB, C++, SQL, HTML, CSS, JavaScript, Git, Microsoft Office, ArcGIS, ENVI, LaTeX 
 
 **Languages:** Korean (Elementary), Spanish (Elementary)
