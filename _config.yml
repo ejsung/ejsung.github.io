@@ -122,7 +122,7 @@ author:
     - label: "ORCID"
       icon: "fab fa-fw fa-orcid"
       # icon: "ai ai-orcid-square ai-fw"
-      url: "https://orcid.org/my-orcid?orcid=0000-0003-4437-1068"
+      url: "https://orcid.org/0000-0003-4437-1068"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/ejsung"
