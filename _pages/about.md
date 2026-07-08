@@ -26,4 +26,6 @@ I am a 4th year PhD student in the applied mathematics program at the University
 
 In my free time, I love powerlifting, hiking, camping, kayaking, climbing, playing my guitar, and spending time with my friends!
 
+I'm also an avid cook and baker. You can probably find me baking something during my non-outdoorsy downtime. 
+
 <img width="200" height="100" src="/assets/images/lake_kayaking_pic.JPG" title="My friends and I kayaked in a flooded forest just off a highway in rural Louisiana. I like to take risks 😝."> 
