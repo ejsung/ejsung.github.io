@@ -1,10 +1,11 @@
 name: Build and deploy Jekyll site to GitHub Pages
 
 on:
-  # Deploy only when changes are pushed to the live branch.
+  # Run the workflow for the live branch and the temporary test branch.
   push:
     branches:
       - master
+      - feature/custom-jekyll-build
 
   # Also allow the workflow to be started manually from GitHub.
   workflow_dispatch:
@@ -56,6 +57,8 @@ jobs:
           path: ./_site
 
   deploy:
+    if: github.ref == 'refs/heads/master'
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
