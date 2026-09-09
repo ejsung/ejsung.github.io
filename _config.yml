@@ -108,7 +108,7 @@ analytics:
 author:
   name             : "Eric J. Sung"
   avatar           : "/assets/images/Eric_Sung_uofa_2023.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Applied mathematics PhD student working at the intersection of mathematics and physics."
+  bio              : "Applied Mathematics PhD student working at the intersection of condensed matter theory, open quantum systems, and analog gravity."
   location         : "Tucson, Arizona"
   links:
     - label: "Contact"

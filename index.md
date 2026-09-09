@@ -3,7 +3,7 @@ title: "Eric J. Sung"
 layout: single
 classes: wide
 created_at: 2021-12-02
-last_modified_at: 2025-08-27
+last_modified_at: 2026-09-08
 author_profile: true
 excerpt: "Applied Mathematics PhD Student"
 header:
@@ -12,4 +12,4 @@ header:
     overlay_filter: 0.4 # same as adding an opacity of 0.5 to a black background
 ---
 
-Hey peeps! My name is Eric Sung! I am a 4th year PhD student in the Program in Applied Mathematics at the University of Arizona. I primarily work on condensed matter physics, open quantum systems, and scientific machine learning. To see my current and past research, check out my [research section](_pages/research.md)!
+Hey peeps! My name is Eric Sung, and I am a fourth-year PhD student in the Program in Applied Mathematics at the University of Arizona. My research primarily focuses on condensed matter physics, open quantum systems, analog gravity, and scientific machine learning, with broader interests in general relativity. You can learn more about my current and past research in my [research section](_pages/research.md)!

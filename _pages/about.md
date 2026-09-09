@@ -13,14 +13,14 @@ Previous front matter backup:
 title: "About"
 layout: single
 created_at: 2021-12-02
-last_modified_at: 2023-07-06
+last_modified_at: 2026-09-08
 classes: wide
 permalink: /about/
 ---
 -->
 
 
-I am a 4th year PhD student in the applied mathematics program at the University of Arizona. Prior to enrolling in Arizona, I graduated with a Bachelor of Science in mathematics and a minor in geology from Tulane University in May 2020. Then I graduated with a Master of Science in applied mathematics from Tulane University in May 2021. 
+I am a fourth-year PhD student in the applied mathematics program at the University of Arizona. Prior to enrolling in Arizona, I graduated with a Bachelor of Science in mathematics and a minor in geology from Tulane University in May 2020. Then I graduated with a Master of Science in applied mathematics from Tulane University in May 2021. 
 
 <img align="right" width="300" height="500" src="/assets/images/texas_hiking_pic.jpg" title="This is me hiking on Enchanted Rock in Texas. The Texas BBQ afterwards was amazing. Would definitely recommend getting the whole smoked ribeye.">
 
