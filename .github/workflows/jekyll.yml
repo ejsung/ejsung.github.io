@@ -1,0 +1,69 @@
+name: Build and deploy Jekyll site to GitHub Pages
+
+on:
+  # Deploy only when changes are pushed to the live branch.
+  push:
+    branches:
+      - master
+
+  # Also allow the workflow to be started manually from GitHub.
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Fetch the entire Git history so plugins such as
+      # jekyll-last-modified-at can inspect commit dates.
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      # Configure GitHub Pages metadata.
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      # Match the Ruby version used successfully on the local machine.
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3.12"
+          bundler-cache: true
+
+      # Build the site ourselves instead of using GitHub Pages'
+      # restricted Jekyll build environment.
+      - name: Build site
+        env:
+          JEKYLL_ENV: production
+        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+
+      # Package the generated _site directory for GitHub Pages.
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: ./_site
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
