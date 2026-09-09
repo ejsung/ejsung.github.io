@@ -2,8 +2,7 @@
 title: "Eric J. Sung"
 layout: single
 classes: wide
-created_at: 2021-12-02
-last_modified_at: 2026-09-08
+date: 2021-12-02
 author_profile: true
 excerpt: "Applied Mathematics PhD Student"
 header:
