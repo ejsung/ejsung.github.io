@@ -2,6 +2,7 @@
 main:
   # - title: "Quick-Start Guide"
   #  url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+  
   - title: "Home"
     url: /
 
@@ -24,13 +25,19 @@ main:
     children:
       - title: "Cooking & Baking"
         url: /hobbies/cooking-baking/
+
       - title: "Lifting"
         url: /hobbies/lifting/
+
+      - title: "Hiking"
+        url: /hobbies/hiking/
+
       - title: "Other Hobbies"
         url: /hobbies/other/
 
   - title: "Contact"
     url: /contact/
+
   # - title: "Other Interests"
   #   url: /other_interests/
       # - title: "About"
