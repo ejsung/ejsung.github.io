@@ -7,3 +7,192 @@ search: false
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+
+// ============================================================
+// Masthead dropdown menu
+// ============================================================
+
+.masthead__menu-item--dropdown {
+  position: relative;
+}
+
+
+// ------------------------------------------------------------
+// Dropdown toggle
+//
+// Make the Hobbies <button> look like the other masthead links.
+// ------------------------------------------------------------
+
+.masthead__dropdown-toggle {
+  display: block;
+
+  margin: 0 1rem;
+  padding: 0;
+
+  border: 0;
+  background: transparent;
+
+  color: $masthead-link-color;
+
+  font: inherit;
+  line-height: inherit;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $masthead-link-color-hover;
+    outline: none;
+  }
+}
+
+
+// ------------------------------------------------------------
+// Dropdown arrow
+// ------------------------------------------------------------
+
+.masthead__dropdown-arrow {
+  display: inline-block;
+
+  margin-left: 0.2rem;
+
+  font-size: 0.7em;
+  vertical-align: middle;
+
+  transition: transform 0.2s ease;
+}
+
+
+// Rotate the arrow when the dropdown is open.
+
+.masthead__menu-item--dropdown.is-open
+  > .masthead__dropdown-toggle
+  .masthead__dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+
+// ------------------------------------------------------------
+// Dropdown menu
+// ------------------------------------------------------------
+
+.masthead__submenu {
+  display: none;
+  position: absolute;
+
+  top: 100%;
+  left: 0;
+
+  min-width: 200px;
+
+  margin: 0;
+  padding: 0.35rem 0;
+
+  list-style: none;
+
+  background: $background-color;
+
+  border: 1px solid $border-color;
+  border-radius: 4px;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+
+  z-index: 1000;
+}
+
+
+// Show dropdown when JavaScript adds the .is-open class.
+
+.masthead__menu-item--dropdown.is-open > .masthead__submenu {
+  display: block;
+}
+
+
+// ------------------------------------------------------------
+// Dropdown items
+//
+// Some Minimal Mistakes rules for .visible-links apply to nested
+// <li> and <a> elements too, so explicitly override them here.
+// ------------------------------------------------------------
+
+.visible-links .masthead__submenu li {
+  display: block;
+  position: relative;
+
+  margin: 0;
+  padding: 0;
+}
+
+.visible-links .masthead__submenu li::before {
+  display: none;
+}
+
+.visible-links .masthead__submenu a {
+  display: block;
+
+  margin: 0;
+  padding: 0.55rem 1rem;
+
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.visible-links .masthead__submenu a:hover,
+.visible-links .masthead__submenu a:focus {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+
+// ============================================================
+// Greedy navigation fallback
+//
+// Minimal Mistakes moves links into .hidden-links when there is
+// not enough horizontal room. In that menu, show the hobby links
+// as normal nested items instead of a floating dropdown.
+// ============================================================
+
+.hidden-links .masthead__dropdown-toggle {
+  width: 100%;
+
+  margin: 0;
+  padding: 10px 20px;
+
+  text-align: left;
+}
+
+.hidden-links .masthead__submenu {
+  display: block;
+  position: static;
+
+  min-width: 0;
+
+  margin: 0;
+  padding: 0 0 0 1rem;
+
+  border: 0;
+  border-radius: 0;
+
+  box-shadow: none;
+}
+
+.hidden-links .masthead__submenu li {
+  display: block;
+}
+
+.hidden-links .masthead__submenu a {
+  margin: 0;
+  padding: 8px 20px;
+}
+
+// ============================================================
+// Allow custom dropdowns to extend outside the greedy-nav list
+// ============================================================
+
+.greedy-nav > .visible-links {
+  overflow: visible;
+}
+
+.masthead__menu-item--dropdown.is-open {
+  z-index: 1001;
+}

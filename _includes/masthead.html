@@ -4,32 +4,120 @@
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
+
         {% unless logo_path == empty %}
-          <a class="site-logo" href="{{ '/' | relative_url }}"><img src="{{ logo_path | relative_url }}" alt="{{ site.masthead_title | default: site.title }}"></a>
+          <a class="site-logo" href="{{ '/' | relative_url }}">
+            <img
+              src="{{ logo_path | relative_url }}"
+              alt="{{ site.masthead_title | default: site.title }}"
+            >
+          </a>
         {% endunless %}
+
         <a class="site-title" href="{{ '/' | relative_url }}">
           {{ site.masthead_title | default: site.title }}
-          {% if site.subtitle %}<span class="site-subtitle">{{ site.subtitle }}</span>{% endif %}
+          {% if site.subtitle %}
+            <span class="site-subtitle">{{ site.subtitle }}</span>
+          {% endif %}
         </a>
+
         <ul class="visible-links">
           {%- for link in site.data.navigation.main -%}
-            <li class="masthead__menu-item">
-              <a href="{{ link.url | relative_url }}"{% if link.description %} title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
+
+            <li class="masthead__menu-item{% if link.children %} masthead__menu-item--dropdown{% endif %}">
+
+              {% if link.children %}
+
+                <button
+                  class="masthead__dropdown-toggle"
+                  type="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  {{ link.title }}
+                  <span class="masthead__dropdown-arrow" aria-hidden="true">▾</span>
+                </button>
+
+                <ul class="masthead__submenu">
+                  {% for child in link.children %}
+                    <li>
+                      <a href="{{ child.url | relative_url }}">
+                        {{ child.title }}
+                      </a>
+                    </li>
+                  {% endfor %}
+                </ul>
+
+              {% else %}
+
+                <a
+                  href="{{ link.url | relative_url }}"
+                  {% if link.description %}title="{{ link.description }}"{% endif %}
+                >
+                  {{ link.title }}
+                </a>
+
+              {% endif %}
+
             </li>
+
           {%- endfor -%}
         </ul>
+
         {% if site.search == true %}
-        <button class="search__toggle" type="button">
-          <span class="visually-hidden">{{ site.data.ui-text[site.locale].search_label | default: "Toggle search" }}</span>
-          <i class="fas fa-search"></i>
-        </button>
+          <button class="search__toggle" type="button">
+            <span class="visually-hidden">
+              {{ site.data.ui-text[site.locale].search_label | default: "Toggle search" }}
+            </span>
+            <i class="fas fa-search"></i>
+          </button>
         {% endif %}
+
         <button class="greedy-nav__toggle hidden" type="button">
-          <span class="visually-hidden">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle menu" }}</span>
+          <span class="visually-hidden">
+            {{ site.data.ui-text[site.locale].menu_label | default: "Toggle menu" }}
+          </span>
           <div class="navicon"></div>
         </button>
+
         <ul class="hidden-links hidden"></ul>
+
       </nav>
     </div>
   </div>
 </div>
+
+
+<script>
+  document.addEventListener("click", function (event) {
+    const toggle = event.target.closest(".masthead__dropdown-toggle");
+
+    // If the user clicked somewhere outside a dropdown toggle,
+    // close any open dropdown menus.
+    if (!toggle) {
+      document
+        .querySelectorAll(".masthead__menu-item--dropdown.is-open")
+        .forEach(function (dropdown) {
+          dropdown.classList.remove("is-open");
+
+          const button = dropdown.querySelector(
+            ".masthead__dropdown-toggle"
+          );
+
+          if (button) {
+            button.setAttribute("aria-expanded", "false");
+          }
+        });
+
+      return;
+    }
+
+    const dropdown = toggle.closest(".masthead__menu-item--dropdown");
+    const isOpen = dropdown.classList.toggle("is-open");
+
+    toggle.setAttribute(
+      "aria-expanded",
+      isOpen ? "true" : "false"
+    );
+  });
+</script>
