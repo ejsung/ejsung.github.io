@@ -10,7 +10,7 @@
 # Review documentation to determine if you should use `theme` or `remote_theme`
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
-github: [metadata]
+# github: [metadata]
 
 # theme                  : "minimal-mistakes-jekyll"
 remote_theme           : "mmistakes/minimal-mistakes@4.28.0"
@@ -197,6 +197,7 @@ exclude:
   - CHANGELOG
   - config
   - Gemfile
+  - Gemfile.lock
   - Gruntfile.js
   - gulpfile.js
   - LICENSE
@@ -249,7 +250,7 @@ permalink: /:categories/:title/
 timezone: America/Phoenix # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
-# Plugins (previously gems:)
+# Plugins
 plugins:
   - jekyll-remote-theme
   - jekyll-paginate
@@ -259,16 +260,6 @@ plugins:
   - jekyll-include-cache
   - jekyll-last-modified-at
   - jekyll/scholar
-  # - jekyll-git-metadata
-# mimic GitHub Pages with --safe
-whitelist:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jekyll-include-cache
-  - jekyll-last-modified-at
-  # - jekyll-git-metadata
 
 # Archives
 #  Type

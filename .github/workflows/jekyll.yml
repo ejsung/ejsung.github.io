@@ -1,13 +1,11 @@
 name: Build and deploy Jekyll site to GitHub Pages
 
 on:
-  # Run the workflow for the live branch and the temporary test branch.
   push:
     branches:
       - master
-      - feature/custom-jekyll-build
 
-  # Also allow the workflow to be started manually from GitHub.
+  # Allow manual builds for testing feature branches.
   workflow_dispatch:
 
 permissions:
@@ -31,28 +29,23 @@ jobs:
         with:
           fetch-depth: 0
 
-      # Configure GitHub Pages metadata.
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
 
-      # Match the Ruby version used successfully on the local machine.
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.3.12"
           bundler-cache: true
 
-      # Build the site ourselves instead of using GitHub Pages'
-      # restricted Jekyll build environment.
       - name: Build site
         env:
           JEKYLL_ENV: production
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
 
-      # Package the generated _site directory for GitHub Pages.
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v5
         with:
           path: ./_site
 
@@ -69,4 +62,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5

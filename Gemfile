@@ -12,22 +12,17 @@ source "https://rubygems.org"
 # To upgrade, run `bundle update`.
 
 gem "jekyll", "~> 4.4"
-gem "jekyll-remote-theme"
-gem "jekyll-include-cache", group: :jekyll_plugins
 gem "webrick"
 
 # If you have any plugins, put them here!
 # Cf. https://jekyllrb.com/docs/plugins/installation/
 group :jekyll_plugins do
+  gem "jekyll-feed"
+  gem "jekyll-gist"
+  gem "jekyll-include-cache"
   gem "jekyll-last-modified-at"
   gem "jekyll-paginate"
-  gem "jekyll-sitemap"
-  gem "jekyll-gist"
-  gem "jekyll-feed"
+  gem "jekyll-remote-theme"
   gem "jekyll-scholar"
-  # gem "github-pages", group: :jekyll_plugins
-  # gem "jekyll-include-cache"
-  # gem "jemoji"
-  # gem "jekyll-algolia"
-  # gem 'jekyll-git-metadata'
+  gem "jekyll-sitemap"
 end
