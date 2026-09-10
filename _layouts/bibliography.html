@@ -1,0 +1,28 @@
+---
+---
+
+{% assign formatted_reference = reference %}
+
+{% if formatted_reference contains "E. J. Sung" %}
+  {% assign formatted_reference = formatted_reference
+    | replace: "E. J. Sung", "<strong>E. J. Sung</strong>" %}
+{% elsif formatted_reference contains "J. Sung" %}
+  {% assign formatted_reference = formatted_reference
+    | replace: "J. Sung", "<strong>J. Sung</strong>" %}
+{% endif %}
+
+{{ formatted_reference }}
+
+{% if entry.eprint %}
+  <a href="https://arxiv.org/abs/{{ entry.eprint }}"
+     target="_blank"
+     rel="noopener">arXiv</a>
+{% elsif entry.doi %}
+  <a href="https://doi.org/{{ entry.doi }}"
+     target="_blank"
+     rel="noopener">DOI</a>
+{% elsif entry.url %}
+  <a href="{{ entry.url }}"
+     target="_blank"
+     rel="noopener">Link</a>
+{% endif %}

@@ -9,26 +9,25 @@ source "https://rubygems.org"
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
 
-# gem "github-pages", group: :jekyll_plugins
-
 # To upgrade, run `bundle update`.
 
-gem "github-pages", group: :jekyll_plugins
+gem "jekyll", "~> 4.4"
+gem "jekyll-remote-theme"
 gem "jekyll-include-cache", group: :jekyll_plugins
 gem "webrick"
 
 # If you have any plugins, put them here!
 # Cf. https://jekyllrb.com/docs/plugins/installation/
 group :jekyll_plugins do
-    gem "jekyll-last-modified-at"
-    gem "jekyll-paginate"
-    gem "jekyll-sitemap"
-    gem "jekyll-gist"
-    gem "jekyll-feed"
-    # gem "jekyll-include-cache"
-    # gem "jemoji"
-    # gem "jekyll-algolia"
-    # gem 'jekyll-git-metadata'
-  end
-
-  
+  gem "jekyll-last-modified-at"
+  gem "jekyll-paginate"
+  gem "jekyll-sitemap"
+  gem "jekyll-gist"
+  gem "jekyll-feed"
+  gem "jekyll-scholar"
+  # gem "github-pages", group: :jekyll_plugins
+  # gem "jekyll-include-cache"
+  # gem "jemoji"
+  # gem "jekyll-algolia"
+  # gem 'jekyll-git-metadata'
+end
