@@ -38,5 +38,4 @@ Seminar Advisor: <a href = "https://sse.tulane.edu/lisa-j-fauci" target = "_blan
 
 * Clifford Lectures, Oct 2019. Tulane University, New Orleans, LA.  
 
-* American Geophysical Union Fall 2018 Conference, Dec 2018. Washington, DC.  
-**Poster**: <a href = "https://drive.google.com/file/d/1zGiyFAG4s1-nueR7RD5iMx4GRUtErAW_/view?usp=sharing" target = "_blank">*Sentinel-1A InSAR Time Series Analysis for Monitoring of Surface Subsidence in Coastal Louisiana*</a>
+* American Geophysical Union Fall 2018 Conference, Dec 2018 (**Poster**). Washington, DC.
