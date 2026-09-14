@@ -15,9 +15,6 @@ main:
   - title: "Teaching"
     url: /teaching/
 
-  # - title: "Coding Projects"
-  #   url: /coding_projects/
-
   - title: "CV"
     url: /cv/
 
@@ -38,8 +35,6 @@ main:
   - title: "Contact"
     url: /contact/
 
-  # - title: "Other Interests"
-  #   url: /other_interests/
       # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
