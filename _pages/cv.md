@@ -7,7 +7,7 @@ permalink: /cv/
 tags: [cv, resume, skills, software, language]
 ---
 
-Full Curriculum Vita <a href = "https://drive.google.com/file/d/10a9SlDgHYIlE4QByoiTXN-C1mCSMW47i/view?usp=sharing" target = "_blank">here.</a>
+Full Curriculum Vitae <a href="/files/Eric_Sung_CV.pdf" target="_blank">here.</a>
 
 ## Education 
 
