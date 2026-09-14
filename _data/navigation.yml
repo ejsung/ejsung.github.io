@@ -28,6 +28,9 @@ main:
 
       - title: "Hiking"
         url: /hobbies/hiking/
+      
+      - title: "Coding Projects"
+        url: /coding_projects/
 
       - title: "Other Hobbies"
         url: /hobbies/other/
@@ -35,7 +38,7 @@ main:
   - title: "Contact"
     url: /contact/
 
-      # - title: "About"
+  # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
 
   # - title: "Sample Posts"
