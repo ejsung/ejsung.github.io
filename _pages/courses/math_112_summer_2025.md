@@ -3,7 +3,7 @@ title: "Math 112 Summer 2025"
 layout: single
 date: 2025-8-20
 classes: wide
-permalink: /courses/math_112_summer_2025/
+permalink: /teaching/courses/math_112_summer_2025/
 tags: [teaching, classes, courses, math 112, summer, algebra, college algebra]
 ---
 ### Office Hours

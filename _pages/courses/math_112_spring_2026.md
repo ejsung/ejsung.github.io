@@ -3,7 +3,7 @@ title: "Math 112 Spring 2026"
 layout: single
 date: 2026-1-13
 classes: wide
-permalink: /courses/math_112_spring_2026/
+permalink: /teaching/courses/math_112_spring_2026/
 tags: [teaching, classes, courses, math 112, spring, algebra, college algebra]
 ---
 ### Course Information
@@ -16,4 +16,4 @@ Tuesday at 2:00pm - 3:00pm
 Wednesday, Thursday at 12:00pm - 1:00pm
 
 <ins>Location:</ins>  
-Office hours will be held at my office in ENR2-S370EE. One on one virtual meetings via Zoom are available upon request.  
+Office hours will be held at my office in ENR2-S370EE. One on one virtual meetings via Zoom are available upon request.
