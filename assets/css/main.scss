@@ -7,3 +7,25 @@ search: false
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+
+/* Bracketed numbering for Jekyll Scholar bibliographies */
+
+ol.bibliography {
+  list-style: none;
+  counter-reset: bibentry;
+  padding-left: 2.75em;
+}
+
+ol.bibliography > li {
+  counter-increment: bibentry;
+  position: relative;
+}
+
+ol.bibliography > li::before {
+  content: "[" counter(bibentry) "]";
+  position: absolute;
+  left: -2.75em;
+  width: 2.25em;
+  text-align: right;
+}
