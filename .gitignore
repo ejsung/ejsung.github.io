@@ -29,3 +29,6 @@ _site
 
 # Drafts
 _pages/_drafts/
+
+# Generated Research page update metadata
+/_data/research_updated.yml
