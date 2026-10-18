@@ -49,6 +49,86 @@ def three_way_merge(local: bytes, base: bytes, updated: bytes) -> tuple[int, byt
         return proc.returncode, proc.stdout
 
 
+# Recognize *only* the three conflicts already audited for this website.
+# Unexpected conflicts still stop the migration instead of choosing a side.
+CONFLICT_HUNK = re.compile(
+    r"(?ms)^<<<<<<< [^\n]*\n(.*?)^\|\|\|\|\|\|\| [^\n]*\n"
+    r"(.*?)^=======$\n(.*?)^>>>>>>> [^\n]*\n"
+)
+
+
+CUSTOM_ACADEMIC_ICON_COLORS = """  // Site-specific academic/social icon colors (retained from 4.24.0).
+  .fa-bluesky,
+  .fa-square-bluesky {
+    color: #1185fe;
+  }
+
+  .fa-orcid {
+    color: #A6CE39;
+  }
+
+  .fa-google-scholar {
+    color: #4285F4;
+  }
+
+  .fa-researchgate {
+    color: #00CCBB;
+  }
+"""
+
+
+def resolve_reviewed_conflict(path: str, candidate: bytes) -> bytes | None:
+    """Resolve precisely audited 4.24.0 -> 4.28.0 Sass conflicts.
+
+    The candidate is the diff3 output. Each accepted resolution requires one
+    conflict hunk with the exact expected local/base/upstream text. Any change
+    to the conflict's structure returns None and stops the whole migration.
+    """
+    text = candidate.decode("utf-8")
+    hunks = list(CONFLICT_HUNK.finditer(text))
+    if len(hunks) != 1:
+        return None
+
+    hunk = hunks[0]
+    local, base, upstream = hunk.groups()
+
+    if path == "_sass/minimal-mistakes/_navigation.scss":
+        if (local, base, upstream) != (
+            "        visibility: hidden;\n        left: 0;\n",
+            "        left: 0;\n",
+            "        inset-inline-start: 0;\n",
+        ):
+            return None
+        resolved = "        visibility: hidden;\n        inset-inline-start: 0;\n"
+
+    elif path == "_sass/minimal-mistakes/_sidebar.scss":
+        if (base != "      float: right;\n" or
+                local.replace("      float: right;", "      float: inline-end;", 1) != upstream):
+            return None
+        resolved = upstream
+
+    elif path == "_sass/minimal-mistakes/_utilities.scss":
+        # The only local change to this hunk was inserting four icon-color
+        # rules immediately ahead of .fa-vimeo in the old selector list.
+        expected_insert = CUSTOM_ACADEMIC_ICON_COLORS.split("  // Site-specific academic/social icon colors (retained from 4.24.0).\n", 1)[1]
+        expected_local = base.replace(
+            "  .fa-vimeo,\n", expected_insert + "\n  .fa-vimeo,\n", 1
+        )
+        if (local != expected_local or
+                "  @each $color, $icons in (\n" not in upstream or
+                "    #{$icons} {\n      color: $color;\n    }" not in upstream):
+            return None
+        resolved = upstream.rstrip("\n") + "\n\n" + CUSTOM_ACADEMIC_ICON_COLORS.rstrip("\n") + "\n"
+
+    else:
+        return None
+
+    merged = text[:hunk.start()] + resolved + text[hunk.end():]
+    if any(marker in merged for marker in ("<<<<<<<", "|||||||", ">>>>>>>")):
+        return None
+    return merged.encode("utf-8")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--upstream", type=Path, default=Path("../minimal-mistakes-upstream"))
@@ -112,8 +192,11 @@ def main() -> int:
         elif previous is not None and latest is not None:
             status, candidate = three_way_merge(local, previous, latest)
             if status:
-                conflicts.append((path, candidate))
-                continue
+                resolved = resolve_reviewed_conflict(path, candidate)
+                if resolved is None:
+                    conflicts.append((path, candidate))
+                    continue
+                candidate = resolved
             desired = candidate
             merged.append(path)
         elif previous is None and latest is None:
