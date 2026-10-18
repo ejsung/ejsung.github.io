@@ -148,3 +148,37 @@ fixed masthead before committing. The feed can change due to generated dates.
 Next stages: isolate and migrate custom Sass partials; audit the local JavaScript
 bundle and Node toolchain; update obsolete external assets and MathJax; then
 update theme version and production CI, with one final regression check.
+
+## Stage 3 — Synchronize Sass with pinned upstream (4.28.0)
+
+The repository customizes several internal Sass partials. **For extensive
+partial customizations, Minimal Mistakes recommends retaining the complete
+`_sass` tree**, not deleting most partials and relying on load-path fallbacks.
+See https://mmistakes.github.io/minimal-mistakes/docs/stylesheets/ .
+
+`scripts/sync_theme_sass.py` synchronizes the **entire** `_sass` tree to the
+version already pinned in `_config.yml` (4.28.0). Files identical to old
+upstream are replaced outright. Locally changed files get a three-way merge
+(`4.24.0`, local, `4.28.0`) so user changes are not silently discarded.
+The script stops without writing anything if any merge has a conflict or a
+local change cannot be carried forward automatically. No assets, config,
+layouts, or JavaScript files are changed by this tool.
+
+First commit this script, then from a **clean** modernization branch:
+
+```bash
+python3 scripts/sync_theme_sass.py --report ../sass-upgrade-report.txt
+# Only if the above exits successfully with zero conflicts:
+python3 scripts/sync_theme_sass.py --apply --report ../sass-upgrade-report.txt
+bundle exec jekyll build > ../website-sass-build.log 2>&1
+```
+
+Expected: `assets/css/main.css` and theme-related generated content may change
+because this updates Sass from 4.24.0 to 4.28.0. Check the local homepage,
+mobile nav, fixed masthead, sidebar, footer, and print view. Do **not** commit
+on a failed build or a visual regression. `git restore --source=HEAD --staged
+--worktree -- _sass` rolls back all uncommitted Sass migration changes.
+
+After stabilization, an optional follow-up can isolate project-specific CSS
+into `assets/css/main.scss` and investigate whether removing local `_sass`
+completely works with the remote theme; that is a distinct, testable change.
