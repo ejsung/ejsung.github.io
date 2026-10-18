@@ -77,7 +77,7 @@ CUSTOM_ACADEMIC_ICON_COLORS = """  // Site-specific academic/social icon colors 
 """
 
 
-def resolve_reviewed_conflict(path: str, candidate: bytes) -> bytes | None:
+def resolve_reviewed_conflict(path: str, candidate: bytes) -> "bytes | None":
     """Resolve precisely audited 4.24.0 -> 4.28.0 Sass conflicts.
 
     The candidate is the diff3 output. Each accepted resolution requires one
