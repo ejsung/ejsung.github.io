@@ -34,3 +34,20 @@ node --check assets/js/site-custom.js
 `.github/workflows/jekyll.yml` builds on pushes to `master` and supports manual runs for branch verification. Only `master` deploys to GitHub Pages. Do not merge a maintenance branch until its local build and browser checks pass.
 
 See [docs/MODERNIZATION.md](docs/MODERNIZATION.md), [docs/FRONTEND-MIGRATION.md](docs/FRONTEND-MIGRATION.md), and [docs/INFRASTRUCTURE.md](docs/INFRASTRUCTURE.md) for migration history and validation instructions.
+
+## Validate and update dependencies
+
+```bash
+python3 -m unittest discover -s tests -v
+python3 scripts/inventory_repo.py
+JEKYLL_ENV=production bundle exec jekyll build
+python3 scripts/check_site.py --root _site
+```
+
+After committing source changes, run `bash scripts/update_dependencies.sh` on
+macOS to resolve and test compatible updated Ruby gems. Review and commit the
+new `Gemfile.lock` separately. Do not manually edit the lockfile to invent
+versions. Check GitHub Actions on the modernization branch before deployment.
+
+See [architecture and override ownership](docs/ARCHITECTURE.md) and the
+[remaining release gates](docs/MODERNIZATION.md).

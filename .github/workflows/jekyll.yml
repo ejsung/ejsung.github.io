@@ -8,10 +8,7 @@ on:
   # Allow manual builds for testing feature branches.
   workflow_dispatch:
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+permissions: {} # each job gets only the permissions it needs
 
 concurrency:
   group: "pages"
@@ -19,7 +16,9 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
 
     steps:
       # Fetch the entire Git history so plugins such as
@@ -55,6 +54,9 @@ jobs:
 
           printf 'last_updated: "%s"\n' "$updated_at" > _data/research_updated.yml
 
+      - name: Test generated-site link checker
+        run: python3 -m unittest discover -s tests -v
+
       - name: Check website-specific JavaScript syntax
         run: node --check assets/js/site-custom.js
 
@@ -73,6 +75,9 @@ jobs:
           test -s _site/assets/js/site-custom.js
           test -s _site/index.html
 
+      - name: Verify local links and browser assets
+        run: python3 scripts/check_site.py --root _site
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v5
         with:
@@ -80,12 +85,15 @@ jobs:
 
   deploy:
     if: github.ref == 'refs/heads/master'
+    permissions:
+      pages: write
+      id-token: write
 
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     needs: build
 
     steps:

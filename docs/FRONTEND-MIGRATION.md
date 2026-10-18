@@ -29,3 +29,7 @@ Lunr assets separately if the search index works after migration.
 
 Do not merge into `master` if these checks fail. Jekyll building successfully
 alone cannot validate dynamic JavaScript or external CDN resources.
+
+Follow-up (October 2026): Font Awesome is pinned to 7.3.1 and MathJax to
+4.1.3 for predictable static asset loading. The built-in theme handles
+standard Lunr libraries; this repository keeps the customized search index.
