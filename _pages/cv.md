@@ -7,7 +7,7 @@ permalink: /cv/
 tags: [cv, resume, skills, software, language]
 ---
 
-Full Curriculum Vitae <a href="/files/Eric_Sung_CV.pdf" target="_blank">here.</a>
+Full Curriculum Vitae <a href="/files/Eric_Sung_CV.pdf" target="_blank">here.</a> (Updated: {{ site.data.cv.last_updated | date: "%B %-d, %Y" }})
 
 ## Education 
 

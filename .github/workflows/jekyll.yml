@@ -39,6 +39,22 @@ jobs:
           ruby-version: "3.3.12"
           bundler-cache: true
 
+
+      - name: Generate Research update date
+        shell: bash
+        run: |
+          updated_at="$(git log -1 --format=%cI -- \
+            _pages/research.md \
+            _bibliography/references.bib \
+            _data/conferences.json)"
+
+          if [ -z "$updated_at" ]; then
+            echo "Could not determine Research update date" >&2
+            exit 1
+          fi
+
+          printf 'last_updated: "%s"\n' "$updated_at" > _data/research_updated.yml
+
       - name: Build site
         env:
           JEKYLL_ENV: production

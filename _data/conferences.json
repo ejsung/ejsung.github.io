@@ -1,0 +1,36 @@
+[
+  {
+    "name": "2026 MSTIC Summer Symposium",
+    "date": "Aug 2026",
+    "location": "Sandia National Laboratories, Albuquerque, NM",
+    "presentation": "Talk"
+  },
+  {
+    "name": "Quantum Thermodynamics & Decoherence (QTD) Symposium 2026",
+    "date": "Jun 2026",
+    "location": "University of Rochester, Rochester, NY",
+    "presentation": "Poster"
+  },
+  {
+    "name": "American Physical Society Global Physics Summit 2026",
+    "date": "Mar 2026",
+    "location": "Denver, CO",
+    "presentation": "Talk"
+  },
+  {
+    "name": "Math for All in New Orleans",
+    "date": "Mar 2020",
+    "location": "Tulane University, New Orleans, LA"
+  },
+  {
+    "name": "Clifford Lectures",
+    "date": "Oct 2019",
+    "location": "Tulane University, New Orleans, LA"
+  },
+  {
+    "name": "2018 American Geophysical Union (AGU) Fall Meeting",
+    "date": "Dec 2018",
+    "location": "Washington, DC",
+    "presentation": "Poster"
+  }
+]

@@ -23,19 +23,20 @@ Condensed Matter Physics, Nonequilibrium Quantum Many-Body Physics, Scientific M
 
 {% bibliography --query @inproceedings %}
 
+### Conferences and Workshops Attended
+
+<ul>
+{% for conference in site.data.conferences %}
+  <li>
+    {{ conference.name | escape }}{% if conference.presentation %} (<strong>{{ conference.presentation | escape }}</strong>){% endif %}, {{ conference.date | escape }}. {{ conference.location | escape }}.
+  </li>
+{% endfor %}
+</ul>
+
 ### Master's Thesis
 <a href = "/files/theses/Mathematics_and_Applications_of_Feynman_Diagrams.pdf" target="_blank">*Mathematics and Applications of Feynman Diagrams*</a>  
 Thesis Advisor: <a href = "https://sse.tulane.edu/victor-h-moll" target = "_blank">Prof. Victor H. Moll</a> 
 
 ### Undergraduate Senior Seminar Paper
 *Mathematical Fluid Dynamics of Microorganisms*  
-Seminar Advisor: <a href = "https://sse.tulane.edu/lisa-j-fauci" target = "_blank">Prof. Lisa J. Fauci</a> 
-
-### Conferences and Workshops Attended
-* American Physical Society Global Physics Summit 2026, Mar 2026 (**Talk**). Denver, CO   
-
-* Math for All in New Orleans, Mar 2020. Tulane University, New Orleans, LA.  
-
-* Clifford Lectures, Oct 2019. Tulane University, New Orleans, LA.  
-
-* American Geophysical Union Fall 2018 Conference, Dec 2018 (**Poster**). Washington, DC.
+Seminar Advisor: <a href = "https://sse.tulane.edu/lisa-j-fauci" target = "_blank">Prof. Lisa J. Fauci</a>
