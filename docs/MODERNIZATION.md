@@ -79,3 +79,41 @@ A changed checksum is not a failure; investigate unexpected changes before
 committing. `sass-embedded` may still produce warnings for `@import` and other
 legacy upstream Sass features in version 4.28.1. Do not conceal them until the
 actual compatibility state is understood.
+
+## Stage 2: Conservatively retire redundant includes/layouts
+
+The first override audit found 161 theme-related files, including 75 byte-identical
+copies of upstream 4.28.1, 55 unmodified copies from 4.24.0, 26 locally
+modified files, 3 files absent from the new upstream, and 2 local-only files.
+
+Do **not** delete all 130 upstream copies in one operation. Start with only
+local `_includes/` and `_layouts/` copies classified as identical to 4.28.1
+**and** independently verified to match the actually pinned remote theme
+(4.28.0). This intentionally leaves `_sass/`, `assets/js/`, and every
+modified or old-only file untouched.
+
+```bash
+# Run from the website repo root after committing this script.
+python3 scripts/cleanup_verified_theme_files.py \
+  --audit ../theme-override-audit.csv \
+  --upstream ../minimal-mistakes-upstream \
+  --ref 4.28.0
+
+# Examine the dry-run list. Then stage ONLY the verified removals.
+python3 scripts/cleanup_verified_theme_files.py \
+  --audit ../theme-override-audit.csv \
+  --upstream ../minimal-mistakes-upstream \
+  --ref 4.28.0 --apply
+
+bundle exec jekyll build > ../website-stage2-build.log 2>&1
+python3 scripts/site_manifest.py capture _site ../site-stage2.json
+python3 scripts/site_manifest.py compare ../site-before.json ../site-stage2.json
+
+git diff --cached --stat
+```
+
+Review unexpected generated-site changes before committing. If a regression
+occurs, restore staged deletions with `git restore --source=HEAD --staged --worktree --
+_includes _layouts` while still on the modernization branch. The script
+refuses to operate in apply mode with an unclean Git tree. Do not change the
+pinned remote theme version until this cleanup is validated.
