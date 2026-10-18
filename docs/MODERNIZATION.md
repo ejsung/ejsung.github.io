@@ -117,3 +117,34 @@ occurs, restore staged deletions with `git restore --source=HEAD --staged --work
 _includes _layouts` while still on the modernization branch. The script
 refuses to operate in apply mode with an unclean Git tree. Do not change the
 pinned remote theme version until this cleanup is validated.
+
+## Stage 2C — Bulk include/layout migration
+
+The 4.24.0-to-4.28.0 upstream diff has been reviewed. The bulk patch removes
+33 **unchanged 4.24.0 copies** of Minimal Mistakes `_includes` and `_layouts`
+that were present in the site's initial audit. The pinned remote theme remains
+`4.28.0`; Jekyll resolves those paths from the remote theme instead.
+
+**Never remove** the locally customized template overrides just because a theme
+file with the same name exists upstream. In particular, this stage retains
+`_layouts/single.html`, `_layouts/bibliography.html`, `_includes/page__date.html`,
+`_includes/scripts.html`, and the custom author profile, SEO-adjacent includes,
+and site-specific navigation templates.
+
+Validation, from the website root:
+
+```bash
+bundle exec jekyll build > ../website-bulk-templates-build.log 2>&1
+python3 scripts/compare_rendered_html.py \
+  ../website-stage2c-reference-output _site
+```
+
+`compare_rendered_html.py` deliberately ignores **only** blank lines. A nonzero
+exit means content/markup changed and should be reviewed, not necessarily that
+the migration failed. A successful build is necessary but is not visual proof:
+review homepage, mobile navigation, search, CV and Research content, and the
+fixed masthead before committing. The feed can change due to generated dates.
+
+Next stages: isolate and migrate custom Sass partials; audit the local JavaScript
+bundle and Node toolchain; update obsolete external assets and MathJax; then
+update theme version and production CI, with one final regression check.
