@@ -13,7 +13,8 @@
 # github: [metadata]
 
 # theme                  : "minimal-mistakes-jekyll"
-remote_theme           : "mmistakes/minimal-mistakes@4.28.0"
+# Keep this pin aligned with locally customized _sass partials.
+remote_theme           : "mmistakes/minimal-mistakes@4.28.1"
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
@@ -242,6 +243,11 @@ kramdown:
 sass:
   sass_dir: _sass
   style: compressed # https://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+  # Minimal Mistakes still contains legacy Sass in third-party dependencies.
+  # Keep unexpected warnings/errors visible while suppressing expected noise.
+  quiet_deps: true
+  silence_deprecations:
+    - import
 
 
 # Outputting

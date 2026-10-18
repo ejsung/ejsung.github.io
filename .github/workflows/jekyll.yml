@@ -55,10 +55,23 @@ jobs:
 
           printf 'last_updated: "%s"\n' "$updated_at" > _data/research_updated.yml
 
+      - name: Check website-specific JavaScript syntax
+        run: node --check assets/js/site-custom.js
+
       - name: Build site
         env:
           JEKYLL_ENV: production
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+
+      # Ensure the remote theme, custom JS, and Sass compiler all provided
+      # the assets the site expects before publishing the Pages artifact.
+      - name: Verify generated frontend assets
+        shell: bash
+        run: |
+          test -s _site/assets/css/main.css
+          test -s _site/assets/js/main.min.js
+          test -s _site/assets/js/site-custom.js
+          test -s _site/index.html
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v5
