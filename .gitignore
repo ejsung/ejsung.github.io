@@ -32,3 +32,7 @@ _pages/_drafts/
 
 # Generated Research page update metadata
 /_data/research_updated.yml
+# Python test and audit tools
+__pycache__/
+*.py[cod]
+.pytest_cache/

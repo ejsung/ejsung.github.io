@@ -1,12 +1,14 @@
 ---
 title: "Eric J. Sung"
 layout: single
-classes: wide
+classes:
+  - wide
+  - sunset-home
 date: 2021-12-02
 author_profile: true
 excerpt: "Applied Mathematics PhD Student"
 header:
-    overlay_image: assets/images/An_abstract_image_that_combines_elements_of_partic (2).jpg
+    overlay_image: assets/images/saguaro_sunset_2026.JPG
     # overlay_image: assets/images/quantum_physics_photo.jpg
     overlay_filter: 0.4 # same as adding an opacity of 0.5 to a black background
 ---
