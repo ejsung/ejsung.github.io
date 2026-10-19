@@ -9,6 +9,22 @@ search: false
 @import "minimal-mistakes"; // main partials
 
 
+/* Homepage sunset hero */
+.sunset-home .page__hero--overlay {
+  min-height: 20rem; /* Approximately 320px */
+  display: flex;
+  align-items: center;
+  background-position: center 45%;
+}
+
+/* Smaller screens */
+@media (max-width: 600px) {
+  .sunset-home .page__hero--overlay {
+    min-height: 25rem; /* Approximately 400px */
+    background-position: 40% center;
+  }
+}
+
 /* Bracketed numbering for Jekyll Scholar bibliographies */
 
 ol.bibliography {
