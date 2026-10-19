@@ -17,7 +17,15 @@ from xml.etree import ElementTree
 
 SITE_HOSTS = {'ejsung.github.io', 'www.ejsung.github.io'}
 ASSET_ATTRS = {'href', 'src', 'poster', 'data-src', 'data-href'}
-CSS_URL = re.compile(r'url\(\s*[\'"]?([^\'"\)]+)', re.I)
+CSS_URL = re.compile(
+    r"url\(\s*(?:([\"'])(.*?)\1|([^)]*))\s*\)", re.I | re.S
+)
+
+
+def css_urls(text: str):
+    """Yield URLs inside CSS url(...), including quoted names containing ')'."""
+    for match in CSS_URL.finditer(text):
+        yield (match.group(2) if match.group(2) is not None else match.group(3).strip())
 
 
 class References(HTMLParser):
@@ -34,7 +42,7 @@ class References(HTMLParser):
             # A srcset candidate is URL followed by optional density/width.
             self.urls.extend(x.strip().split()[0] for x in d['srcset'].split(',') if x.strip())
         if d.get('style'):
-            self.urls.extend(CSS_URL.findall(d['style']))
+            self.urls.extend(css_urls(d['style']))
 
 
 def resolve(root: Path, containing: Path, raw_url: str):
@@ -70,6 +78,7 @@ def resolve(root: Path, containing: Path, raw_url: str):
 
 
 def check(root: Path):
+    root = root.resolve()
     issues = []
     if not (root / 'index.html').is_file():
         return [('index.html', 'missing site homepage')]
@@ -81,7 +90,7 @@ def check(root: Path):
             if issue is not None:
                 issues.append((str(filename.relative_to(root)), issue[1]))
     for filename in sorted(root.rglob('*.css')):
-        for u in CSS_URL.findall(filename.read_text(encoding='utf-8', errors='replace')):
+        for u in css_urls(filename.read_text(encoding='utf-8', errors='replace')):
             issue = resolve(root, filename, u)
             if issue is not None:
                 issues.append((str(filename.relative_to(root)), issue[1]))

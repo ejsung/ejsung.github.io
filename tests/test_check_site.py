@@ -20,6 +20,27 @@ class SiteLinkTests(unittest.TestCase):
                 <a href="https://example.com">External</a>''')
             self.assertEqual(check(root), [])
 
+    def test_quoted_css_url_with_parentheses(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / 'assets').mkdir()
+            (root / 'assets' / 'photo (2).jpg').write_bytes(b'photo')
+            (root / 'index.html').write_text(
+                '<div style="background-image: url(\'/assets/photo%20(2).jpg\')"></div>'
+            )
+            (root / 'assets' / 'site.css').write_text(
+                'body { background-image: url("photo%20(2).jpg"); }'
+            )
+            self.assertEqual(check(root), [])
+
+    def test_missing_image_with_parentheses_is_reported(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / 'index.html').write_text(
+                '<div style="background-image: url(\'/assets/missing%20(2).jpg\')"></div>'
+            )
+            self.assertEqual(check(root), [('index.html', '/assets/missing%20(2).jpg')])
+
     def test_missing_local_asset_is_reported(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
