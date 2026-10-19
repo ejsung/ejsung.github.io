@@ -8,10 +8,7 @@ on:
   # Allow manual builds for testing feature branches.
   workflow_dispatch:
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+permissions: {} # each job gets only the permissions it needs
 
 concurrency:
   group: "pages"
@@ -19,7 +16,9 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
 
     steps:
       # Fetch the entire Git history so plugins such as
@@ -55,10 +54,35 @@ jobs:
 
           printf 'last_updated: "%s"\n' "$updated_at" > _data/research_updated.yml
 
+      - name: Test generated-site link checker
+        run: python3 -m unittest discover -s tests -v
+
+      - name: Check website-specific JavaScript syntax
+        run: node --check assets/js/site-custom.js
+
       - name: Build site
         env:
           JEKYLL_ENV: production
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+
+      # Ensure the remote theme, custom JS, and Sass compiler all provided
+      # the assets the site expects before publishing the Pages artifact.
+      - name: Verify generated frontend assets
+        shell: bash
+        run: |
+          test -s _site/assets/css/main.css
+          test -s _site/assets/js/main.min.js
+          test -s _site/assets/js/site-custom.js
+          test -s _site/index.html
+
+      - name: Validate generated Lunr search index
+        shell: bash
+        run: |
+          test -s _site/assets/js/lunr/lunr-store.js
+          node --check _site/assets/js/lunr/lunr-store.js
+
+      - name: Verify local links and browser assets
+        run: python3 scripts/check_site.py --root _site
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v5
@@ -67,12 +91,15 @@ jobs:
 
   deploy:
     if: github.ref == 'refs/heads/master'
+    permissions:
+      pages: write
+      id-token: write
 
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     needs: build
 
     steps:

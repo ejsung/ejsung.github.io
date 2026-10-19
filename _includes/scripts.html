@@ -1,3 +1,4 @@
+{% assign locale = include.locale | default: site.locale %}
 {% if site.footer_scripts %}
   {% for script in site.footer_scripts %}
     <script src="{{ script | relative_url }}"></script>
@@ -10,16 +11,16 @@
   {%- assign search_provider = site.search_provider | default: "lunr" -%}
   {%- case search_provider -%}
     {%- when "lunr" -%}
-      {% include_cached search/lunr-search-scripts.html %}
+      {% include_cached search/lunr-search-scripts.html locale=locale %}
     {%- when "google" -%}
       {% include_cached search/google-search-scripts.html %}
     {%- when "algolia" -%}
-      {% include_cached search/algolia-search-scripts.html %}
+      {% include_cached search/algolia-search-scripts.html locale=locale %}
   {%- endcase -%}
 {% endif %}
 
 {% include analytics.html %}
-{% include /comments-providers/scripts.html %}
+{% include /comments-providers/scripts.html locale=locale %}
 
 {% if site.after_footer_scripts %}
   {% for script in site.after_footer_scripts %}
@@ -27,25 +28,17 @@
   {% endfor %}
 {% endif %}
 
-<script type="text/javascript" async
-	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
-</script>
+{% comment %}Keep website-specific JS separate from the upstream theme bundle.{% endcomment %}
+<script src="{{ '/assets/js/site-custom.js' | relative_url }}"></script>
 
-{% if page.mathjax %}
-<script type="text/javascript" async
-  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
-{% endif %}
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+{% comment %}MathJax 4: retain dollar-sign and bracket delimiters used throughout the academic site.{% endcomment %}
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: {'[+]': [['$', '$']]},
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
       processEscapes: true
-    },
-    "HTML-CSS": { availableFonts: ["TeX"] }
-  });
-</script> 
+    }
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@4.1.3/tex-chtml.js"></script>
