@@ -21,10 +21,10 @@ REASONS = {
     '_includes/scripts.html': 'MathJax 4 and custom JavaScript loading',
     '_includes/head/custom.html': 'Favicon, Academicons and external profile link behavior',
     '_includes/video': 'Custom privacy-aware video providers',
-    'assets/css/main.scss': 'Sass entry point and site-specific CSS',
+    'assets/css/main.scss': 'Site stylesheet entry point and site-specific CSS',
+    '_sass/minimal-mistakes.scss': 'Required local theme Sass import entry point; resolves six local custom partials before upstream fallback',
     'assets/js/lunr/lunr-store.js': 'Site-specific search indexing data',
     'assets/js/site-custom.js': 'Site-specific sidebar and heading behavior',
-    '_sass/minimal-mistakes.scss': 'Theme Sass entry point; version-aligned with remote theme',
 }
 
 
@@ -32,7 +32,17 @@ def category(name):
     if name in REASONS:
         return 'custom override / site behavior', REASONS[name]
     if name.startswith('_sass/'):
-        return 'vendored Sass', 'Full upstream 4.28.1 Sass tree retained because Jekyll theme-partial overrides are interdependent; reviewed with sync_theme_sass.py'
+        custom_sass = {
+            '_sass/minimal-mistakes/_base.scss',
+            '_sass/minimal-mistakes/_masthead.scss',
+            '_sass/minimal-mistakes/_navigation.scss',
+            '_sass/minimal-mistakes/_page.scss',
+            '_sass/minimal-mistakes/_sidebar.scss',
+            '_sass/minimal-mistakes/_utilities.scss',
+        }
+        if name in custom_sass:
+            return 'custom Sass override', 'Site-specific style changes; unmodified Sass inherits from pinned remote theme'
+        return 'review', 'Unexpected local Sass file; compare against remote theme before retaining'
     if name.startswith('_includes/') or name.startswith('_layouts/'):
         return 'theme override', 'Local template: review rendered output against upstream before removal'
     if name.startswith(('_pages/', '_bibliography/', 'files/')) or name == 'index.md':

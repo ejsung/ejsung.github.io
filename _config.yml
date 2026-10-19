@@ -1,6 +1,6 @@
 # Eric J. Sung — academic website
 # Site-specific settings for the Minimal Mistakes remote theme.
-# Keep the theme and the customized _sass tree at the same upstream release.
+# Keep the six customized Sass partials aligned with the pinned theme release.
 
 # Theme and site identity
 remote_theme: mmistakes/minimal-mistakes@4.28.1

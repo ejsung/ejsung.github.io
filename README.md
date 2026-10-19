@@ -24,7 +24,7 @@ node --check assets/js/site-custom.js
 
 - `_pages/`, `_data/`, `_bibliography/`: site-specific content and data.
 - `_includes/`, `_layouts/`: intentionally retained local overrides; corresponding local files take precedence over remote theme files.
-- `_sass/`: complete theme Sass tree maintained locally because the site customizes multiple Sass partials. Update carefully when changing the remote theme version.
+- `_sass/`: the theme Sass import entry point and six site-customized partials; unchanged Sass and vendor files come from the pinned remote theme.
 - `assets/css/main.scss`: site stylesheet entry point and site-specific styles.
 - `assets/js/site-custom.js`: custom website behavior; `assets/js/main.min.js` is supplied by the remote theme at build time.
 - `scripts/`, `docs/`: maintenance tools and documentation, excluded from the generated website.

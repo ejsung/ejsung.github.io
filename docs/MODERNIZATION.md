@@ -11,7 +11,7 @@ Photographs and other authored image assets are intentionally untouched.
 ## What has been implemented
 
 - Migrated theme layouts/includes to pinned Minimal Mistakes 4.28.1 and
-  synchronized customized Sass to that release.
+  synchronized six customized Sass overrides to that release.
 - Replaced the old locally built JavaScript bundle with the remote theme bundle;
   retained only site-specific behavior in `assets/js/site-custom.js`.
 - Switched to MathJax 4, Academicons 1.9.6 and version-pinned frontend CDNs.
@@ -40,8 +40,9 @@ layout geometry, mathematical rendering, or performance. Those need browser chec
 
 ## Outstanding release gates — not complete without these
 
-- [ ] Run `scripts/update_dependencies.sh` on the Mac and review the newly
-      resolved `Gemfile.lock`; check security advisories with bundler-audit.
+- [x] Resolve and commit compatible Ruby dependency updates; remove unused
+      `jekyll-gist` and `jekyll-paginate` plugins.
+- [ ] Review security advisories with bundler-audit.
 - [ ] Run the updated branch GitHub Actions build. It must pass while deployment
       remains skipped.
 - [ ] Check desktop/mobile navigation, active search, profile links, MathJax,
@@ -50,7 +51,7 @@ layout geometry, mathematical rendering, or performance. Those need browser chec
 - [ ] Check browser console, keyboard navigation, and search interaction for regressions.
 - [ ] Compare appearance with the pre-modernization site before merging.
 
-The **complete `_sass` tree** is a deliberate, version-matched vendor copy,
-not a file classification oversight. Its removal requires a separate, tested
-architectural migration; the existing remote theme is not fully Sass-module
-modernized upstream. See `docs/ARCHITECTURE.md`.
+The redundant `_sass` vendor copies can be removed while retaining the local
+`_sass/minimal-mistakes.scss` entry point and six custom partials, subject to
+a successful exact compiled-CSS comparison. This does **not** replace the remote theme's older Sass internals.
+See `docs/ARCHITECTURE.md` for the boundary and upgrade procedure.
