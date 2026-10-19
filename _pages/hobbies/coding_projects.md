@@ -9,7 +9,7 @@ tags: [coding, software, simulation]
 
 Most of my coding projects are inspired from my research and favorite subjects. I also do projects that stem from eclectic interests such as video games and/or optimizing my life!
 
-Please see my github for full project details: <a href = "https://github.com/ejsung?tab=repositories" target = "_blank">https://github.com/ejsung?tab=repositories</a>
+Please see my GitHub for full project details: <a href = "https://github.com/ejsung?tab=repositories" target = "_blank">https://github.com/ejsung?tab=repositories</a>
 
 <!-- <p style="text-align: left;">
     <font size="+2">
