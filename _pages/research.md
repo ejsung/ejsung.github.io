@@ -34,7 +34,7 @@ Condensed Matter Physics, Nonequilibrium Quantum Many-Body Physics, Scientific M
 </ul>
 
 ### Master's Thesis
-<a href = "/files/theses/Mathematics_and_Applications_of_Feynman_Diagrams.pdf" target="_blank">*Mathematics and Applications of Feynman Diagrams*</a>  
+<a href = "https://www.proquest.com/docview/2561419290/abstract/5A2A42E7A9224893PQ/1" target="_blank">*Mathematics and Applications of Feynman Diagrams*</a>  
 Thesis Advisor: <a href = "https://sse.tulane.edu/victor-h-moll" target = "_blank">Prof. Victor H. Moll</a> 
 
 ### Undergraduate Senior Seminar Paper
