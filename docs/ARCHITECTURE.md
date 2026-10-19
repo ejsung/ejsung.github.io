@@ -11,7 +11,7 @@ fork of the theme, and its local copies should not be replaced indiscriminately.
 | `_pages/`, `index.md`, `_data/` | Authored pages, CV metadata, conferences and navigation | Preserve user content; do not rewrite during theme upgrades |
 | `_bibliography/`, `assets/bibliography/`, `_layouts/bibliography.html` | Publication data, APS CSL, author highlighting | Keep custom layout and format intentionally |
 | `_layouts/single.html`, `_includes/page__date.html`, `_includes/page__meta.html` | Custom academic page layout and timestamp behavior | Compare with corresponding upstream files at each new theme version |
-| `_includes/author-profile.html`, `_includes/breadcrumbs.html`, `_includes/video` | Customized profile, navigation and video embeds | Retain until behavior can be replaced with documented theme APIs |
+| `_includes/author-profile.html` | Researcher profile and configured social links | Keep only the profile markup actively used; inherit unused breadcrumbs and video includes from the theme |
 | `_includes/head.html`, `_includes/head/custom.html`, `_includes/scripts.html` | Site metadata, favicons, pinned CDN resources, MathJax 4 and custom scripts | Merge upstream template changes carefully |
 | `_sass/` | One local Sass import entry point (`minimal-mistakes.scss`) and six customized partials (`_base`, `_masthead`, `_navigation`, `_page`, `_sidebar`, `_utilities`) | The local entry point ensures custom partials are used while unmodified Sass, skins and vendors inherit from the remote theme |
 | `assets/js/site-custom.js` | Sticky sidebar and heading permalink behavior | Keep independent of upstream JavaScript bundle |
@@ -47,6 +47,10 @@ same-version partial copies, and manual layout tests are still required.
   on the development Mac, then commit and test the resulting lockfile.
 - Theme-provided jQuery, plugins, Lunr source and JS bundle: do not duplicate
   them locally without a documented modification.
+
+The one-time theme-copy audit and cleanup scripts were retired after the migration.
+Use `scripts/site_manifest.py` and `scripts/compare_rendered_html.py`
+for future built-site comparisons.
 
 Local link checking deliberately does **not** make network requests. External
 URL availability, accessibility audits and screenshot diffs require additional

@@ -42,7 +42,7 @@ layout geometry, mathematical rendering, or performance. Those need browser chec
 
 - [x] Resolve and commit compatible Ruby dependency updates; remove unused
       `jekyll-gist` and `jekyll-paginate` plugins.
-- [ ] Review security advisories with bundler-audit.
+- [x] Review security advisories with bundler-audit (2026-10-18: no known vulnerabilities found).
 - [ ] Run the updated branch GitHub Actions build. It must pass while deployment
       remains skipped.
 - [ ] Check desktop/mobile navigation, active search, profile links, MathJax,
@@ -51,7 +51,7 @@ layout geometry, mathematical rendering, or performance. Those need browser chec
 - [ ] Check browser console, keyboard navigation, and search interaction for regressions.
 - [ ] Compare appearance with the pre-modernization site before merging.
 
-The redundant `_sass` vendor copies can be removed while retaining the local
-`_sass/minimal-mistakes.scss` entry point and six custom partials, subject to
-a successful exact compiled-CSS comparison. This does **not** replace the remote theme's older Sass internals.
+The redundant `_sass` vendor copies were removed, retaining the local
+`_sass/minimal-mistakes.scss` entry point and six custom partials; the
+compiled stylesheet was confirmed byte-for-byte identical after removal. This does **not** replace the remote theme's older Sass internals.
 See `docs/ARCHITECTURE.md` for the boundary and upgrade procedure.

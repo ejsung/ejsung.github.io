@@ -15,8 +15,8 @@ exists: this verifies that the remote theme supplies the bundle.
 
 The old Node build setup (`package.json`, `package-lock.json`, `banner.js`,
 `assets/js/_main.js`, `assets/js/plugins/`, `assets/js/vendor/`) is no longer
-needed. Keep the customized `assets/js/lunr/lunr-store.js`; review the other
-Lunr assets separately if the search index works after migration.
+needed. The site retains `assets/js/lunr/lunr-store.js` for its generated
+search index; all other Lunr scripts are supplied by the pinned theme.
 
 ## Browser regression checks
 

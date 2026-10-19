@@ -71,7 +71,6 @@ footer:
 
 # Jekyll files and parsing
 include:
-- .htaccess
 - _pages
 exclude:
 - vendor
@@ -82,12 +81,8 @@ exclude:
 - LICENSE
 - node_modules
 - /docs
-- /test
 - scripts
 - tests
-keep_files:
-- .git
-- .svn
 encoding: utf-8
 markdown_ext: markdown,mkdown,mkdn,mkd,md
 markdown: kramdown
