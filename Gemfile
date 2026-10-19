@@ -18,10 +18,8 @@ gem "webrick"
 # Cf. https://jekyllrb.com/docs/plugins/installation/
 group :jekyll_plugins do
   gem "jekyll-feed"
-  gem "jekyll-gist"
   gem "jekyll-include-cache"
   gem "jekyll-last-modified-at"
-  gem "jekyll-paginate"
   gem "jekyll-remote-theme"
   gem "jekyll-scholar"
   gem "jekyll-sitemap"
