@@ -360,3 +360,127 @@ body.command-palette-open { overflow: hidden; }
     to { opacity: 1; transform: translateY(0); }
   }
 }
+
+/* ============================================================
+   Enhanced Jekyll Scholar bibliography
+   ============================================================ */
+
+
+.publication-tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 0.35rem;
+  margin: 0.5rem 0 0.8rem;
+  font-size: 0.78rem;
+}
+
+.publication-tools__action,
+.publication-tools__copy {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 1.75rem;
+  padding: 0.2rem 0.55rem;
+  border: 1px solid $border-color;
+  border-radius: 0.3rem;
+  background-color: mix($primary-color, $background-color, 5%);
+  color: $link-color;
+  font: inherit;
+  font-weight: 600;
+  line-height: 1.3;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 220ms ease,
+              color 220ms ease,
+              border-color 220ms ease;
+}
+
+.publication-tools__action:hover,
+.publication-tools__copy:hover,
+.publication-tools__action:focus-visible,
+.publication-tools__copy:focus-visible {
+  background-color: mix($primary-color, $background-color, 16%);
+  color: $link-color-hover;
+  text-decoration: none;
+}
+
+.publication-tools__action:focus-visible,
+.publication-tools__copy:focus-visible {
+  outline: 2px solid $primary-color;
+  outline-offset: 2px;
+}
+
+.publication-tools__details {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.publication-tools__details > summary {
+  list-style: none;
+  user-select: none;
+}
+
+.publication-tools__details > summary::-webkit-details-marker { display: none; }
+.publication-tools__details > summary::after {
+  content: "▾";
+  margin-left: 0.4rem;
+  display: inline-block;
+  transition: transform 150ms ease;
+}
+
+.publication-tools__details[open] {
+  flex: 1 0 100%;
+}
+
+.publication-tools__details[open] > summary::after { transform: rotate(180deg); }
+
+.publication-tools__panel {
+  margin-top: 0.45rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid $border-color;
+  border-radius: 0.45rem;
+  background-color: mix($text-color, $background-color, 3%);
+  color: $text-color;
+  overflow-wrap: anywhere;
+  line-height: 1.6;
+}
+
+.publication-tools__abstract { white-space: normal; }
+
+.publication-tools__panel-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.55rem;
+  font-weight: 600;
+}
+
+.publication-tools__copy {
+  min-height: 1.8rem;
+  padding: 0.25rem 0.65rem;
+}
+
+.publication-tools__bibtex,
+.page__content .publication-tools__bibtex {
+  max-width: 100%;
+  margin: 0;
+  padding: 0.8rem;
+  overflow-x: auto;
+  white-space: pre;
+  overflow-wrap: normal;
+  font-size: 0.72rem;
+  line-height: 1.55;
+  tab-size: 2;
+}
+
+.publication-tools__bibtex code { white-space: pre; }
+.publication-tools__copy-status { display: block; margin-top: 0.3rem; font-size: 0.75rem; }
+.publication-tools__copy-status:empty { display: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .publication-tools__action,
+  .publication-tools__copy,
+  .publication-tools__details > summary::after { transition: none; }
+}
