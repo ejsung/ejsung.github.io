@@ -7,41 +7,4 @@ search: false
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
-
-
-/* Homepage sunset hero */
-.sunset-home .page__hero--overlay {
-  min-height: 20rem; /* Approximately 320px */
-  display: flex;
-  align-items: center;
-  background-position: center 45%;
-}
-
-/* Smaller screens */
-@media (max-width: 600px) {
-  .sunset-home .page__hero--overlay {
-    min-height: 25rem; /* Approximately 400px */
-    background-position: 40% center;
-  }
-}
-
-/* Bracketed numbering for Jekyll Scholar bibliographies */
-
-ol.bibliography {
-  list-style: none;
-  counter-reset: bibentry;
-  padding-left: 2.75em;
-}
-
-ol.bibliography > li {
-  counter-increment: bibentry;
-  position: relative;
-}
-
-ol.bibliography > li::before {
-  content: "[" counter(bibentry) "]";
-  position: absolute;
-  left: -2.75em;
-  width: 2.25em;
-  text-align: right;
-}
+@import "site-custom";

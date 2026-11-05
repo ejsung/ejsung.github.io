@@ -1,0 +1,10 @@
+---
+# Compile a separate stylesheet using Minimal Mistakes' dark skin.
+search: false
+---
+
+@charset "utf-8";
+
+@import "minimal-mistakes/skins/dark"; // built-in dark palette
+@import "minimal-mistakes"; // same theme partials
+@import "site-custom"; // same site-specific styling
