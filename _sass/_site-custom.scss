@@ -126,3 +126,52 @@ html[data-theme="dark"] {
     }
   }
 }
+
+
+/* ============================================================
+   Smooth light/dark theme transitions
+   ============================================================ */
+
+/* Respect operating-system reduced-motion preferences. */
+@media (prefers-reduced-motion: no-preference) {
+
+  /* Main backgrounds and interface elements */
+  html,
+  body,
+  .masthead,
+  .greedy-nav,
+  .greedy-nav .hidden-links,
+  .page,
+  .page__content,
+  .sidebar,
+  .author__urls,
+  .page__footer,
+  .notice,
+  pre,
+  code,
+  blockquote,
+  table,
+  th,
+  td,
+  input,
+  textarea,
+  select {
+    transition:
+      background-color 220ms ease,
+      color 220ms ease,
+      border-color 220ms ease;
+  }
+
+  /* Text, navigation links, and icons */
+  a,
+  .site-theme-toggle,
+  .social-icons i,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    transition: color 220ms ease;
+  }
+}
