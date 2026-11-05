@@ -30,8 +30,8 @@
           {%- endfor -%}
         </ul>
         {% if site.search == true %}
-        <button class="search__toggle" type="button">
-          <span class="visually-hidden">{{ site.data.ui-text[locale].search_label | default: "Toggle search" }}</span>
+        <button class="search__toggle" type="button" title="Search and commands (⌘K / Ctrl+K)" aria-keyshortcuts="Meta+K Control+K">
+          <span class="visually-hidden">{{ site.data.ui-text[locale].search_label | default: "Search website and commands" }}</span>
           <i class="fas fa-search"></i>
         </button>
         {% endif %}

@@ -78,7 +78,23 @@ var store = [
             replace:"</h6>", " "|
           strip_html | strip_newlines | truncatewords: 50 | jsonify }},
         {%- endif -%}
+      "tags": {{ doc.tags | jsonify }},
+      "categories": {{ doc.categories | jsonify }},
+      "palette_type": "page",
       "url": {{ doc.url | absolute_url | jsonify }}
   }{%- unless forloop.last and l -%},{%- endunless -%}
   {%- endfor -%}
-{%- endif -%}]
+{%- endif -%}];
+
+// The same Lunr store also includes BibTeX entries from Jekyll Scholar.
+{% for pub in site.data.command_palette_publications %}
+store.push({
+  "title": {{ pub.title | jsonify }},
+  "excerpt": {{ pub.excerpt | jsonify }},
+  "tags": {{ pub.tags | jsonify }},
+  "categories": {{ pub.categories | jsonify }},
+  "url": {{ pub.url | jsonify }},
+  "palette_type": "publication",
+  "year": {{ pub.year | jsonify }}
+});
+{% endfor %}

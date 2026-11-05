@@ -1,3 +1,6 @@
+{% if site.search == true and site.search_provider == "lunr" %}
+  {% include command-palette.html %}
+{% endif %}
 {% assign locale = include.locale | default: site.locale %}
 {% if site.footer_scripts %}
   {% for script in site.footer_scripts %}
@@ -30,6 +33,9 @@
 
 {% comment %}Keep website-specific JS separate from the upstream theme bundle.{% endcomment %}
 <script src="{{ '/assets/js/site-custom.js' | relative_url }}"></script>
+{% if site.search == true and site.search_provider == "lunr" %}
+  <script src="{{ '/assets/js/command-palette.js' | relative_url }}"></script>
+{% endif %}
 
 {% comment %}MathJax 4: retain dollar-sign and bracket delimiters used throughout the academic site.{% endcomment %}
 <script>

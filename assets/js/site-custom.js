@@ -82,16 +82,24 @@
     var initialPreference = document.documentElement.getAttribute("data-theme-preference") || "system";
     applyTheme(initialPreference);
 
+    // Share the same theme controller with the command palette. Both controls
+    // update the saved preference, stylesheets, and masthead icon together.
+    window.EJSungTheme = {
+      setPreference: function (preference) {
+        if (modes.indexOf(preference) === -1) return;
+        try { localStorage.setItem("ejsung-theme", preference); } catch (error) { /* optional */ }
+        applyTheme(preference);
+      },
+      getPreference: function () {
+        return document.documentElement.getAttribute("data-theme-preference") || "system";
+      }
+    };
+
     // Clicking cycles System -> Light -> Dark -> System.
     control.addEventListener("click", function () {
       var preference = document.documentElement.getAttribute("data-theme-preference") || "system";
       var nextPreference = modes[(modes.indexOf(preference) + 1) % modes.length];
-      try {
-        localStorage.setItem("ejsung-theme", nextPreference);
-      } catch (error) {
-        // Manual switching still works without persistence.
-      }
-      applyTheme(nextPreference);
+      window.EJSungTheme.setPreference(nextPreference);
     });
 
     systemPreference.addEventListener("change", function () {
