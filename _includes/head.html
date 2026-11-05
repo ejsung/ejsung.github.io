@@ -18,7 +18,38 @@
 </script>
 
 <!-- For all browsers -->
-<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+<!-- Choose the saved preference before CSS renders to reduce theme flashing. -->
+<script>
+(function () {
+  var preference = "system";
+  try {
+    preference = localStorage.getItem("ejsung-theme") || "system";
+  } catch (error) {
+    // The website remains usable if storage is blocked.
+  }
+  if (preference !== "light" && preference !== "dark") preference = "system";
+
+  var prefersDark = window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches;
+  var isDark = preference === "dark" || (preference === "system" && prefersDark);
+
+  document.documentElement.setAttribute("data-theme-preference", preference);
+  document.documentElement.setAttribute("data-theme", isDark ? "dark" : "light");
+})();
+</script>
+
+<!-- Both stylesheets initially block rendering, so Greedy Navigation measures
+     the final font sizes and spacing after the chosen skin has loaded.
+     Select exactly one skin before the body is parsed. -->
+<link id="site-css-light" rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" media="all">
+<link id="site-css-dark" rel="stylesheet" href="{{ '/assets/css/dark.css' | relative_url }}" media="all">
+<script>
+  (function () {
+    var isDark = document.documentElement.getAttribute("data-theme") === "dark";
+    document.getElementById("site-css-light").media = isDark ? "not all" : "all";
+    document.getElementById("site-css-dark").media = isDark ? "all" : "not all";
+  })();
+</script>
 <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"></noscript>
 

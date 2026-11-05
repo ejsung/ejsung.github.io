@@ -21,6 +21,13 @@
           {% endif %}
         </a>
 
+        <!-- Keep appearance control outside the overflowable navigation links,
+             so it always stays beside the site title (also on mobile). -->
+        <button id="site-theme-toggle" class="site-theme-toggle" type="button"
+          aria-label="Appearance: System. Activate to switch to Light."
+          title="Appearance: System (click for Light)">
+          <i class="fas fa-desktop" aria-hidden="true"></i>
+        </button>
         <ul class="visible-links">
           {%- for link in site.data.navigation.main -%}
 
