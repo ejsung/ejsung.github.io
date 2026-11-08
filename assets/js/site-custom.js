@@ -109,10 +109,39 @@
     });
   }
 
+  function markCurrentNavigation() {
+    const currentPath =
+      window.location.pathname.replace(/\/+$/, "") || "/";
+
+    document
+      .querySelectorAll("#site-nav .visible-links a, #site-nav .hidden-links a")
+      .forEach(function (link) {
+        const url = new URL(link.href);
+
+        // Only highlight navigation links belonging to this website.
+        if (url.origin !== window.location.origin) return;
+
+        const linkPath =
+          url.pathname.replace(/\/+$/, "") || "/";
+
+        const isCurrent =
+          currentPath === linkPath ||
+          (linkPath !== "/" && currentPath.startsWith(linkPath + "/"));
+
+        if (isCurrent) {
+          link.setAttribute("aria-current", "page");
+        } else {
+          link.removeAttribute("aria-current");
+        }
+      });
+  }
+
   function initialize() {
     updateStickySidebar();
     restoreHeadingLinkStyle();
     initializeThemeSwitcher();
+    markCurrentNavigation();
+
     window.addEventListener("resize", updateStickySidebar);
   }
 

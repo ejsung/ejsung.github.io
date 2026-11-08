@@ -484,3 +484,19 @@ body.command-palette-open { overflow: hidden; }
   .publication-tools__copy,
   .publication-tools__details > summary::after { transition: none; }
 }
+
+/* ============================================================
+   Persistent underline for the active navigation item
+   ============================================================ */
+
+#site-nav .visible-links a[aria-current="page"]::before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+/* Highlight the active item in the mobile overflow menu. */
+#site-nav .hidden-links a[aria-current="page"] {
+  color: $masthead-link-color-hover;
+  font-weight: 700;
+}
