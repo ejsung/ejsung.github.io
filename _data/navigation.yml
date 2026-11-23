@@ -1,5 +1,8 @@
 # Primary navigation. Entries are intentionally ordered.
 main:
+  # - title: "Quick-Start Guide"
+  #  url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+  
   - title: "Home"
     url: /
   - title: "About"
@@ -10,5 +13,14 @@ main:
     url: /teaching/
   - title: "CV"
     url: /cv/
+
+  - title: "Hobbies"
+    children:
+      - title: "Cooking & Baking"
+        url: /hobbies/cooking-baking/
+
+      - title: "Nonscientific Interests"
+        url: /hobbies/nonscientific-interests/
+
   - title: "Contact"
     url: /contact/

@@ -34,9 +34,9 @@ Condensed Matter Physics, Nonequilibrium Quantum Many-Body Physics, Analog Gravi
 </ul>
 
 ### Master's Thesis
-<a href = "https://www.proquest.com/docview/2561419290/abstract/5A2A42E7A9224893PQ/1" target="_blank">*Mathematics and Applications of Feynman Diagrams*</a>  
+<a href = "https://www.proquest.com/docview/2561419290/abstract/5A2A42E7A9224893PQ/1" target="_blank">*Mathematics and Applications of Feynman Diagrams*</a>
 Thesis Advisor: <a href = "https://sse.tulane.edu/victor-h-moll" target = "_blank">Prof. Victor H. Moll</a> 
 
 ### Undergraduate Senior Seminar Paper
 *Mathematical Fluid Dynamics of Microorganisms*  
-Seminar Advisor: <a href = "https://sse.tulane.edu/lisa-j-fauci" target = "_blank">Prof. Lisa J. Fauci</a> 
+Seminar Advisor: <a href = "https://sse.tulane.edu/lisa-j-fauci" target = "_blank">Prof. Lisa J. Fauci</a>

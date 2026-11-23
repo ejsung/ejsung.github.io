@@ -15,4 +15,4 @@ In my free time, I love powerlifting, hiking, camping, kayaking, climbing, playi
 
 I'm also an avid cook and baker. You can probably find me baking something during my non-outdoorsy downtime. 
 
-<img width="300" height="500" src="/assets/images/white_sands_bbq.jpg" title="Grilling burgers at White Sands National Park, NM."> 
+<img width="300" height="500" src="/assets/images/white_sands_bbq.jpg" title="Grilling burgers at White Sands National Park, NM.">
