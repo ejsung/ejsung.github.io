@@ -19,17 +19,8 @@ main:
       - title: "Cooking & Baking"
         url: /hobbies/cooking-baking/
 
-      - title: "Lifting"
-        url: /hobbies/lifting/
-
-      - title: "Hiking"
-        url: /hobbies/hiking/
-      
-      - title: "Coding Projects"
-        url: /coding_projects/
-
-      - title: "Other Hobbies"
-        url: /hobbies/other/
+      - title: "Nonscientific Interests"
+        url: /hobbies/nonscientific-interests/
 
   - title: "Contact"
     url: /contact/

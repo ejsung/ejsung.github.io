@@ -7,6 +7,6 @@ permalink: /hobbies/cooking-baking/
 tags: [hobbies,cooking,baking]
 ---
 
-I have a huge passion for cooking and baking! Due to my strong passion in learning about other cultures, my favorite types of food to cook are fusion foods! In addition, I love to challenge myself by making certain food items from scratch like cheese, jams, and various breads!
+I have a huge passion for cooking and baking! My love for exploring different cultures has inspired a particular interest in fusion cuisine, where I enjoy experimenting with ingredients, techniques, and flavors from around the world. I also love challenging myself to make foods from scratch, including cheeses, jams, and various types of bread!
 
-I have been writing a cookbook over the years during graduate school that I will release soon. The cookbook caters to graduate students on a tight budget and presents delicious recipes that won't break the bank. Come back to this page for more updates!
+Throughout graduate school, I've been working on a cookbook specifically designed for graduate students on a tight budget. My goal is to share delicious, affordable recipes that don't require expensive ingredients or elaborate equipment. I'm hoping to release it soon, so stay tuned for updates!
