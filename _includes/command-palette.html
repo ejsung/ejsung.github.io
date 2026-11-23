@@ -1,0 +1,49 @@
+{% comment %}
+  A single search interface layered on the existing Lunr index. The existing
+  magnifier and Cmd/Ctrl+K open this dialog. No separate hosted search engine.
+{% endcomment %}
+<div class="command-palette" id="command-palette" hidden>
+  <div class="command-palette__backdrop" data-palette-close></div>
+  <section class="command-palette__dialog" role="dialog" aria-modal="true"
+    aria-labelledby="command-palette-heading">
+    <h2 id="command-palette-heading" class="visually-hidden">Search website and run commands</h2>
+    <div class="command-palette__search-row">
+      <i class="fas fa-search" aria-hidden="true"></i>
+      <label for="command-palette-input" class="visually-hidden">Search pages, publications, tags, and commands</label>
+      <input id="command-palette-input" type="search" role="combobox"
+        aria-autocomplete="list" aria-expanded="true"
+        aria-controls="command-palette-results" autocomplete="off"
+        spellcheck="false" placeholder="Search pages, papers, and commands…">
+      <button type="button" class="command-palette__close" data-palette-close
+        aria-label="Close command palette" title="Close (Escape)">Esc</button>
+    </div>
+    <ul class="command-palette__results" id="command-palette-results" role="listbox"
+      aria-label="Search results"></ul>
+    <p class="command-palette__status" id="command-palette-status" role="status" aria-live="polite"></p>
+    <div class="command-palette__help" aria-hidden="true">
+      <span><kbd>↑</kbd><kbd>↓</kbd> Navigate</span>
+      <span><kbd>↵</kbd> Open</span>
+      <span><kbd>Esc</kbd> Close</span>
+      <span><kbd>#</kbd> Tags</span>
+      <span><kbd>@</kbd> Papers</span>
+    </div>
+  </section>
+</div>
+<script type="application/json" id="command-palette-config">
+{
+  "pages": [
+    {% assign separator = "" %}
+    {% for link in site.data.navigation.main %}
+      {% if link.url %}
+        {{ separator }}{ "title": {{ link.title | jsonify }}, "url": {{ link.url | relative_url | jsonify }} }
+        {% assign separator = "," %}
+      {% endif %}
+      {% for child in link.children %}
+        {% assign child_title = link.title | append: " / " | append: child.title %}
+        {{ separator }}{ "title": {{ child_title | jsonify }}, "url": {{ child.url | relative_url | jsonify }} }
+        {% assign separator = "," %}
+      {% endfor %}
+    {% endfor %}
+  ]
+}
+</script>

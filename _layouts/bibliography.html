@@ -1,6 +1,7 @@
 ---
 ---
 
+{% comment %}Keep the existing APS-formatted citation and author emphasis unchanged.{% endcomment %}
 {% assign formatted_reference = reference %}
 
 {% if formatted_reference contains "E. J. Sung" %}
@@ -13,16 +14,125 @@
 
 {{ formatted_reference }}
 
-{% if entry.eprint %}
-  <a href="https://arxiv.org/abs/{{ entry.eprint }}"
-     target="_blank"
-     rel="noopener">arXiv</a>
-{% elsif entry.doi %}
-  <a href="https://doi.org/{{ entry.doi }}"
-     target="_blank"
-     rel="noopener">DOI</a>
-{% elsif entry.url %}
-  <a href="{{ entry.url }}"
-     target="_blank"
-     rel="noopener">Link</a>
+{% comment %}
+  Normalize resource URLs and suppress duplicate arXiv DOIs / URLs.
+  Only link to URLs supplied by the bibliography; never expose Zotero's
+  `file` field (which may refer to an attachment on the author's computer).
+{% endcomment %}
+{% assign doi = entry.doi | default: '' | strip | remove: 'https://doi.org/' | remove: 'http://doi.org/' | remove: 'https://dx.doi.org/' | remove: 'http://dx.doi.org/' | remove: 'doi:' %}
+{% assign eprint = entry.eprint | default: '' | strip %}
+{% assign archive = entry.archiveprefix | default: '' | downcase %}
+{% assign arxiv_present = false %}
+{% if eprint != '' and archive == 'arxiv' %}
+  {% assign arxiv_present = true %}
 {% endif %}
+
+{% assign arxiv_doi = '10.48550/arxiv.' | append: eprint | downcase %}
+{% assign doi_lower = doi | downcase %}
+{% assign show_doi = false %}
+{% if doi != '' %}
+  {% assign show_doi = true %}
+  {% if arxiv_present and doi_lower == arxiv_doi %}
+    {% assign show_doi = false %}
+  {% endif %}
+{% endif %}
+
+{% assign url = entry.url | default: '' | strip %}
+{% assign url_lower = url | downcase %}
+{% assign doi_url = 'https://doi.org/' | append: doi_lower %}
+{% assign doi_url_http = 'http://doi.org/' | append: doi_lower %}
+{% assign dx_doi_url = 'https://dx.doi.org/' | append: doi_lower %}
+{% assign arxiv_url = 'https://arxiv.org/abs/' | append: eprint | downcase %}
+{% assign arxiv_url_http = 'http://arxiv.org/abs/' | append: eprint | downcase %}
+{% assign arxiv_pdf_url = 'https://arxiv.org/pdf/' | append: eprint | downcase %}
+{% assign url_https = url | slice: 0, 8 %}
+{% assign url_http = url | slice: 0, 7 %}
+{% assign show_url = false %}
+{% if url_https == 'https://' or url_http == 'http://' %}
+  {% assign show_url = true %}
+  {% if doi != '' %}
+    {% if url_lower == doi_url or url_lower == doi_url_http or url_lower == dx_doi_url %}
+      {% assign show_url = false %}
+    {% endif %}
+  {% endif %}
+  {% if arxiv_present %}
+    {% if url_lower == arxiv_url or url_lower == arxiv_url_http or url_lower == arxiv_pdf_url %}
+      {% assign show_url = false %}
+    {% endif %}
+  {% endif %}
+{% endif %}
+
+{% comment %}An explicit `pdf` field may be a web URL or a site-root URL.{% endcomment %}
+{% assign pdf = entry.pdf | default: '' | strip %}
+{% assign pdf_https = pdf | slice: 0, 8 %}
+{% assign pdf_http = pdf | slice: 0, 7 %}
+{% assign pdf_root = pdf | slice: 0, 1 %}
+{% assign show_pdf = false %}
+{% if pdf_https == 'https://' or pdf_http == 'http://' or pdf_root == '/' %}
+  {% assign show_pdf = true %}
+{% endif %}
+{% if show_pdf and pdf == url %}
+  {% assign show_url = false %}
+{% endif %}
+{% if pdf == arxiv_pdf_url %}
+  {% assign show_pdf = false %}
+{% endif %}
+
+<div class="publication-tools" aria-label="Publication resources">
+  {% if arxiv_present %}
+    <a class="publication-tools__action"
+       href="https://arxiv.org/abs/{{ eprint | url_encode }}"
+       target="_blank" rel="noopener noreferrer">arXiv</a>
+  {% endif %}
+
+  {% if show_doi %}
+    <a class="publication-tools__action"
+       href="https://doi.org/{{ doi | escape }}"
+       target="_blank" rel="noopener noreferrer">DOI</a>
+  {% endif %}
+
+  {% if show_url %}
+    <a class="publication-tools__action"
+       href="{{ url | escape }}"
+       target="_blank" rel="noopener noreferrer">Link</a>
+  {% endif %}
+
+  {% if show_pdf %}
+    {% if pdf_root == '/' %}
+      <a class="publication-tools__action"
+         href="{{ pdf | relative_url | escape }}"
+         target="_blank" rel="noopener noreferrer">PDF</a>
+    {% else %}
+      <a class="publication-tools__action"
+         href="{{ pdf | escape }}"
+         target="_blank" rel="noopener noreferrer">PDF</a>
+    {% endif %}
+  {% endif %}
+
+  {% if entry.abstract and entry.abstract != '' %}
+    <details class="publication-tools__details">
+      <summary class="publication-tools__action">Abstract</summary>
+      <div class="publication-tools__panel publication-tools__abstract">
+        {{ entry.abstract | escape | newline_to_br }}
+      </div>
+    </details>
+  {% endif %}
+
+  {% assign bibtex_public = site.data.public_bibtex[key] %}
+  {% if bibtex_public %}
+  <details class="publication-tools__details publication-tools__details--bibtex">
+    <summary class="publication-tools__action">BibTeX</summary>
+    <div class="publication-tools__panel">
+      <div class="publication-tools__panel-heading">
+        <span>BibTeX citation</span>
+        <button type="button" class="publication-tools__copy"
+                data-copy-bibtex aria-label="Copy BibTeX for {{ key | escape }}">
+          Copy
+        </button>
+      </div>
+      <pre class="publication-tools__bibtex"><code>{{ bibtex_public | escape }}</code></pre>
+      <span class="publication-tools__copy-status" role="status" aria-live="polite"></span>
+    </div>
+  </details>
+  {% endif %}
+</div>

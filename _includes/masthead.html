@@ -30,11 +30,8 @@
         </button>
         <ul class="visible-links">
           {%- for link in site.data.navigation.main -%}
-
             <li class="masthead__menu-item{% if link.children %} masthead__menu-item--dropdown{% endif %}">
-
               {% if link.children %}
-
                 <button
                   class="masthead__dropdown-toggle"
                   type="button"
@@ -48,34 +45,32 @@
                 <ul class="masthead__submenu">
                   {% for child in link.children %}
                     <li>
-                      <a href="{{ child.url | relative_url }}">
-                        {{ child.title }}
-                      </a>
+                      <a
+                        href="{{ child.url | relative_url }}"
+                        {% if page.url == child.url %}aria-current="page"{% endif %}
+                        {% if child.description %}title="{{ child.description }}"{% endif %}
+                        {% if child.target %}target="{{ child.target }}"{% endif %}
+                      >{{ child.title }}</a>
                     </li>
                   {% endfor %}
                 </ul>
-
               {% else %}
-
                 <a
                   href="{{ link.url | relative_url }}"
+                  {% if page.url == link.url %}aria-current="page"{% endif %}
                   {% if link.description %}title="{{ link.description }}"{% endif %}
-                >
-                  {{ link.title }}
-                </a>
-
+                  {% if link.target %}target="{{ link.target }}"{% endif %}
+                >{{ link.title }}</a>
               {% endif %}
-
             </li>
 
           {%- endfor -%}
         </ul>
 
         {% if site.search == true %}
-          <button class="search__toggle" type="button">
-            <span class="visually-hidden">
-              {{ site.data.ui-text[site.locale].search_label | default: "Toggle search" }}
-            </span>
+          <button class="search__toggle" type="button"
+            title="Search and commands (⌘K / Ctrl+K)" aria-keyshortcuts="Meta+K Control+K">
+            <span class="visually-hidden">{{ site.data.ui-text[site.locale].search_label | default: "Search website and commands" }}</span>
             <i class="fas fa-search"></i>
           </button>
         {% endif %}
