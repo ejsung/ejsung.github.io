@@ -8,7 +8,7 @@ tags: [hobbies,other,nonscientific]
 ---
 
 ### Nonscientific Research Interests 
-**Ancient World History:** I have had a lifelong passion for world history, particularly the ancient civilizations of the Mediterranean, the Near East, and the India subcontinent. My interests span numerous cultures and historical periods, but I am especially fascinated by Bronze Age Greece (including the Minoan and Mycenaean civilizations), ancient Sumer, and the Indus Valley civilization.
+**Ancient World History:** I have had a lifelong passion for world history, particularly the ancient civilizations of the Mediterranean, the Near East, and the Indian subcontinent. My interests span numerous cultures and historical periods, but I am especially fascinated by Bronze Age Greece (including the Minoan and Mycenaean civilizations), ancient Sumer, and the Indus Valley civilization.
 
 Beyond their histories, I have an equally strong interest in ancient mythologies from around the world. I find it fascinating to explore how different civilizations understood the natural world, explained their origins, and developed their religious and philosophical traditions.
 
